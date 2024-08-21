@@ -1,8 +1,8 @@
-url file://%(curdir)s/%(datadir)s/file.markdown
-cache key file://%(curdir)s/%(datadir)s/file.markdown
-real url file://%(curdir)s/%(datadir)s/file.markdown
-name %(datadir)s/file.markdown
-warning The URL with content type 'text/markdown' is not parseable.
+url file://%(curdir)s/%(datadir)s/file-octet-stream.markdown
+cache key file://%(curdir)s/%(datadir)s/file-octet-stream.markdown
+real url file://%(curdir)s/%(datadir)s/file-octet-stream.markdown
+name %(datadir)s/file-octet-stream.markdown
+warning The URL with content type 'application/octet-stream' is not parseable.
 valid
 
 url http://url.example.com

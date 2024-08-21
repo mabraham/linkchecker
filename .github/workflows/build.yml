@@ -25,6 +25,7 @@ jobs:
           - "3.10"
           - "3.11"
           - "3.12"
+          - "3.13"
         toxenv: [py]
         include:
           - python-version: "3.9"
@@ -79,6 +80,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "${{ matrix.python-version }}"
+          allow-prereleases: true
 
       - name: Pip cache
         uses: actions/cache@v4

@@ -87,7 +87,11 @@ class TestFile(LinkCheckTest):
 
     def test_markdown(self):
         confargs = dict(enabledplugins=["MarkdownCheck"])
-        self.file_test("file.markdown", confargs=confargs)
+        if sys.version_info < (3, 12, 5):
+            markdown_file = "file-octet-stream.markdown"
+        else:
+            markdown_file = "file.markdown"
+        self.file_test(markdown_file, confargs=confargs)
 
     def test_urllist(self):
         self.file_test("urllist.txt")
