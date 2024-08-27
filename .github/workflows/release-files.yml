@@ -8,6 +8,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     permissions:
+      attestations: write
       contents: write
       id-token: write
 
@@ -38,6 +39,11 @@ jobs:
       - name: Create distribution files
         run: >
             python3 -m hatchling build
+
+      - name: Attest
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: 'dist/*.{tar.gz,whl}'
 
       - name: Check distribution files
         run: >
