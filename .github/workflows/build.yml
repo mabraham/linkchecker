@@ -105,7 +105,7 @@ jobs:
       - name: Run tests
         run: |
             python -m hatchling build -t sdist --hooks-only
-            python -m tox -e ${{ matrix.toxenv }}
+            python -m tox -e ${{ matrix.toxenv }}-geoip
 
       - name: Report to coveralls
         uses: coverallsapp/github-action@f350da2c033043742f89e8c0b7b5145a1616da6d  # v2.1.2

@@ -135,7 +135,7 @@ class TestFile(LinkCheckTest):
             # Fails on NT platforms and I am too lazy to fix
             # Cause: url get quoted %7C which gets lowercased to
             # %7c and this fails.
-            pytest.skip("Not running on NT")
+            pytest.skip("Running on Windows")
         url = "file:/%(curdir)s/%(datadir)s/file.txt" % self.get_attrs()
         nurl = self.norm(url)
         resultlines = [
