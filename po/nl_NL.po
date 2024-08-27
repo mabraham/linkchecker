@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LinkChecker\n"
 "Report-Msgid-Bugs-To: https://github.com/linkchecker/linkchecker\n"
-"POT-Creation-Date: 2023-12-04 19:24+0000\n"
+"POT-Creation-Date: 2024-08-27 18:47+0000\n"
 "PO-Revision-Date: 2022-11-19 14:59+0100\n"
 "Last-Translator: Gideon van Melle <translations@gvmelle.com>\n"
 "Language-Team: \n"
@@ -16,6 +16,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2\n"
+
+#: ../linkcheck/director/__init__.py:36
+#, python-format
+msgid "Problem using login URL: %(msg)s."
+msgstr "Fout met login URL: %(msg)s."
+
+#: ../linkcheck/director/__init__.py:39
+#, python-format
+msgid "Error using login URL: %(msg)s."
+msgstr "Fout met login URL: %(msg)s."
+
+#: ../linkcheck/director/__init__.py:44
+#, python-format
+msgid "Error starting log output: %(msg)s."
+msgstr "Fout startlogboekuitvoer: %(msg)s."
+
+#: ../linkcheck/director/__init__.py:60
+msgid ""
+"Could not start a new thread. Check that the current user is allowed to "
+"start new threads."
+msgstr ""
+"Kon niet beginnen met een nieuwe draad. Controleer of de huidige gebruiker "
+"nieuwe threads mag starten."
+
+#: ../linkcheck/director/__init__.py:93
+msgid "interrupt; waiting for active threads to finish"
+msgstr "onderbreking; wachten op actieve threads te voltooien"
+
+#: ../linkcheck/director/__init__.py:94
+msgid "another interrupt will exit immediately"
+msgstr "een andere interrupt zal onmiddellijk afsluiten"
+
+#: ../linkcheck/director/__init__.py:110
+msgid "user abort; force shutdown"
+msgstr "gebruikersafboren; force shutdown"
+
+#: ../linkcheck/director/aggregator.py:54
+#, fuzzy, python-format
+msgid "Could not parse cookie file: %s. %s"
+msgstr "Kan cookie-bestand %s  niet lezen"
+
+#: ../linkcheck/director/aggregator.py:188
+msgid "These URLs are still active:"
+msgstr "Deze URL's zijn nog steeds actief:"
+
+#: ../linkcheck/director/aggregator.py:200
+#, python-format
+msgid ""
+"%(num)d URLs are still active. After a timeout of %(timeout)s the active "
+"URLs will stop."
+msgstr ""
+"%(num)d URL's zijn nog steeds actief. Na een time-out van %(timeout)s "
+"stoppen de actieve URL's."
 
 #: ../linkcheck/director/console.py:38
 #, python-format
@@ -115,58 +168,686 @@ msgstr "sys.argv:"
 msgid "released"
 msgstr "vrijgegeven"
 
-#: ../linkcheck/director/aggregator.py:54
+#: ../linkcheck/plugins/syntaxchecks.py:56
+msgid "HTML syntax check plugin is broken. Fixes welcome."
+msgstr "HTML syntax check plugin is kapot. Fixes welkom."
+
+#: ../linkcheck/plugins/syntaxchecks.py:74
+msgid "valid HTML syntax"
+msgstr "geldige HTML-syntaxis"
+
+#: ../linkcheck/plugins/syntaxchecks.py:81
+#, python-format
+msgid "HTML syntax check plugin error: %(msg)s "
+msgstr "HTML-syntaxiscontrole-plugin fout: %(msg)s "
+
+#: ../linkcheck/plugins/syntaxchecks.py:114
+msgid "valid CSS syntax"
+msgstr "geldige CSS-syntaxis"
+
+#: ../linkcheck/plugins/syntaxchecks.py:121
+#, python-format
+msgid "CSS syntax check plugin error: %(msg)s "
+msgstr "CSS syntaxiscontrole-plugin fout: %(msg)s "
+
+#: ../linkcheck/plugins/syntaxchecks.py:132
+#, python-format
+msgid "%(w3type)s validation error at line %(line)s col %(column)s: %(msg)s"
+msgstr "%(w3type)s validatiefout bij regel %(line)s col %(column)s: %(msg)s"
+
+#: ../linkcheck/plugins/syntaxchecks.py:136
+#, python-format
+msgid "%(w3type)s validation error at line %(line)s: %(msg)s"
+msgstr "%(w3type)s validatiefout bij regel %(line)s: %(msg)s"
+
+#: ../linkcheck/plugins/markdowncheck.py:88
+#: ../linkcheck/plugins/regexcheck.py:45
 #, fuzzy, python-format
-msgid "Could not parse cookie file: %s. %s"
-msgstr "Kan cookie-bestand %s  niet lezen"
+msgid "Invalid regex pattern %r: %s"
+msgstr "ongeldige lege waarde voor %s: %s\n"
 
-#: ../linkcheck/director/aggregator.py:188
-msgid "These URLs are still active:"
-msgstr "Deze URL's zijn nog steeds actief:"
+#: ../linkcheck/plugins/regexcheck.py:61
+#, python-format
+msgid "Found %(match)r at line %(line)d in link contents."
+msgstr "Gevonden %(match)r bij regel %(line)d in de inhoud van de koppeling."
 
-#: ../linkcheck/director/aggregator.py:200
+#: ../linkcheck/plugins/sslcertcheck.py:70
+msgid "certificate did not include \"notAfter\" information"
+msgstr "certificaat bevat geen \"notAfter\" informatie"
+
+#: ../linkcheck/plugins/sslcertcheck.py:73
+msgid "SSL verification is disabled; enable the sslverify option"
+msgstr "SSL-verificatie is uitgeschakeld; de optie sslverify inschakelen"
+
+#: ../linkcheck/plugins/sslcertcheck.py:85
+#, python-format
+msgid "Invalid SSL certificate \"notAfter\" value %r"
+msgstr "Ongeldig SSL-certificaat \"notAfter\" waarde %r"
+
+#: ../linkcheck/plugins/sslcertcheck.py:94
+#, python-format
+msgid "SSL certificate is expired on %(expire)s."
+msgstr "SSL-certificaat is verlopen op %(expire)s."
+
+#: ../linkcheck/plugins/sslcertcheck.py:100
+#, python-format
+msgid "SSL certificate expires on %(expire)s and is only %(valid)s valid."
+msgstr ""
+"SSL-certificaat verloopt op %(expire)s en is alleen geldig voor %(valid)s."
+
+#: ../linkcheck/plugins/sslcertcheck.py:104
+#, python-format
+msgid "SSL certificate expires on %(expire)s and is %(valid)s valid."
+msgstr "SSL-certificaat verloopt op %(expire)s en is %(valid)s geldig."
+
+#: ../linkcheck/plugins/sslcertcheck.py:118
+#: ../linkcheck/configuration/confparse.py:98
+#: ../linkcheck/configuration/confparse.py:116
+#, python-format
+msgid "invalid value for %s: %d must not be less than %d"
+msgstr "ongeldige waarde voor %s: %d mag niet lager zijn dan %d"
+
+#: ../linkcheck/plugins/locationinfo.py:46
+#, python-format
+msgid "URL is located in %(location)s."
+msgstr "URL bevindt zich in %(location)s."
+
+#: ../linkcheck/plugins/viruscheck.py:101
+msgid "clamd is not ready for stream scanning"
+msgstr "clamd is niet klaar voor stream scanning"
+
+#: ../linkcheck/plugins/viruscheck.py:160
+msgid "ScannerDaemonOutputFormat must be disabled"
+msgstr "ScannerDaemonOutputFormat moet zijn uitgeschakeld"
+
+#: ../linkcheck/plugins/viruscheck.py:163
+msgid "only one of TCPSocket and LocalSocket must be enabled"
+msgstr "slechts één van TCPSocket en LocalSocket moet ingeschakeld zijn"
+
+#: ../linkcheck/plugins/viruscheck.py:193
+msgid "one of TCPSocket or LocalSocket must be enabled"
+msgstr "één van TCPSocket of LocalSocket moet ingeschakeld zijn"
+
+#: ../linkcheck/plugins/viruscheck.py:229
+msgid "Could not connect to ClamAV daemon."
+msgstr "Kon geen verbinding maken met ClamAV daemon."
+
+#: ../linkcheck/plugins/anchorcheck.py:70
+#, python-format
+msgid "Anchor `%(name)s' (decoded: `%(decoded)s') not found."
+msgstr "Anker '%(name)s' (gedecodeerd: '%(decoded)s') niet gevonden."
+
+#: ../linkcheck/plugins/anchorcheck.py:71
+#, python-format
+msgid "Available anchors: %(anchors)s."
+msgstr "Beschikbare ankers: %(anchors)s."
+
+#: ../linkcheck/cookies.py:46
+#, fuzzy
+msgid "No entries found"
+msgstr "Er is geen NNTP-server gevonden."
+
+#: ../linkcheck/cmdline.py:61
+#, python-format
+msgid "Error: %(msg)s"
+msgstr "Fout: %(msg)s"
+
+#: ../linkcheck/cmdline.py:63
+#, python-format
+msgid "Execute '%(program)s -h' for help"
+msgstr "Voer '%(program)s -h' uit voor hulp"
+
+#: ../linkcheck/configuration/__init__.py:227
+#, python-format
+msgid "Configuration file %r does not exist."
+msgstr "Configuratiebestand %r bestaat niet."
+
+#: ../linkcheck/configuration/__init__.py:229
+#, python-format
+msgid "Configuration file %r is not readable."
+msgstr "Configuratiebestand %r is niet leesbaar."
+
+#: ../linkcheck/configuration/__init__.py:239
+msgid "missing user or URL pattern in authentication data."
+msgstr "ontbrekende gebruiker of URL-patroon in verificatiegegevens."
+
+#: ../linkcheck/configuration/__init__.py:274
+msgid "activating text logger output."
+msgstr "activatie van tekstlogger output."
+
+#: ../linkcheck/configuration/__init__.py:285
+msgid "no user/password authentication data found for login URL."
+msgstr ""
+"geen gebruikers-/wachtwoordverificatiegegevens gevonden voor login-URL."
+
+#: ../linkcheck/configuration/__init__.py:289
+msgid "login URL is not a HTTP URL."
+msgstr "login URL is geen HTTP URL."
+
+#: ../linkcheck/configuration/__init__.py:293
+msgid "login URL is incomplete."
+msgstr "login URL is onvolledig."
+
+#: ../linkcheck/configuration/__init__.py:296
+#, python-format
+msgid "disabling login URL %(url)s."
+msgstr "uitschakelen van login URL %(url)s."
+
+#: ../linkcheck/configuration/__init__.py:349
+#, python-format
+msgid "could not create plugin directory %(dirname)r: %(errmsg)r"
+msgstr "kan geen plugin directory %(dirname)r aanmaken: %(errmsg)r"
+
+#: ../linkcheck/configuration/__init__.py:397
 #, python-format
 msgid ""
-"%(num)d URLs are still active. After a timeout of %(timeout)s the active "
-"URLs will stop."
+"could not copy initial configuration file %(src)r to %(dst)r: %(errmsg)r"
 msgstr ""
-"%(num)d URL's zijn nog steeds actief. Na een time-out van %(timeout)s "
-"stoppen de actieve URL's."
+"kon het oorspronkelijke configuratiebestand %(src)r niet kopiëren naar "
+"%(dst)r: %(errmsg)r"
 
-#: ../linkcheck/director/__init__.py:36
+#: ../linkcheck/configuration/confparse.py:62
+#, fuzzy, python-format
+msgid "configuration files %s contain no sections."
+msgstr "Configuratiebestand %r bestaat niet."
+
+#: ../linkcheck/configuration/confparse.py:75
 #, python-format
-msgid "Problem using login URL: %(msg)s."
-msgstr "Fout met login URL: %(msg)s."
+msgid "Error parsing configuration: %s"
+msgstr "Fout parsing configuratie: %s"
 
-#: ../linkcheck/director/__init__.py:39
+#: ../linkcheck/configuration/confparse.py:83
 #, python-format
-msgid "Error using login URL: %(msg)s."
-msgstr "Fout met login URL: %(msg)s."
+msgid "invalid empty value for %s: %s\n"
+msgstr "ongeldige lege waarde voor %s: %s\n"
 
-#: ../linkcheck/director/__init__.py:44
+#: ../linkcheck/configuration/confparse.py:103
+#: ../linkcheck/configuration/confparse.py:121
 #, python-format
-msgid "Error starting log output: %(msg)s."
-msgstr "Fout startlogboekuitvoer: %(msg)s."
+msgid "invalid value for %s: %d must not be greater than %d"
+msgstr "ongeldige waarde voor %s: %d mag niet groter zijn dan %d"
 
-#: ../linkcheck/director/__init__.py:60
+#: ../linkcheck/configuration/confparse.py:136
 msgid ""
-"Could not start a new thread. Check that the current user is allowed to "
-"start new threads."
+"The blacklist section in linkcheckerrc is deprecated, please rename to "
+"failures"
 msgstr ""
-"Kon niet beginnen met een nieuwe draad. Controleer of de huidige gebruiker "
-"nieuwe threads mag starten."
+"De blacklist sectie in linkcheckeerrc is afgeschaft. Hernoem naar failures"
 
-#: ../linkcheck/director/__init__.py:93
-msgid "interrupt; waiting for active threads to finish"
-msgstr "onderbreking; wachten op actieve threads te voltooien"
+#: ../linkcheck/configuration/confparse.py:237
+#, python-format
+msgid "missing auth part in entry %(val)r"
+msgstr "ontbrekend auth-gedeelte in de vermelding %(val)r"
 
-#: ../linkcheck/director/__init__.py:94
-msgid "another interrupt will exit immediately"
-msgstr "een andere interrupt zal onmiddellijk afsluiten"
+#: ../linkcheck/configuration/confparse.py:247
+#, python-format
+msgid "invalid login URL `%s'. Only HTTP and HTTPS URLs are supported."
+msgstr ""
+"ongeldige login URL `%s’. Alleen HTTP- en HTTPS-URL's worden ondersteund."
 
-#: ../linkcheck/director/__init__.py:110
-msgid "user abort; force shutdown"
-msgstr "gebruikersafboren; force shutdown"
+#: ../linkcheck/configuration/confparse.py:276
+#, python-format
+msgid ""
+"The configuration file %s contains password information (in section [%s] and "
+"options %s) and the file is readable by others. Please make the file only "
+"readable by you."
+msgstr ""
+"Het configuratiebestand bevat %s wachtwoordinformatie (in sectie [%s] en "
+"opties %s) en het bestand is leesbaar voor anderen. Maak het bestand alleen "
+"leesbaar voor u."
+
+#: ../linkcheck/configuration/confparse.py:285
+#, python-format
+msgid "For example execute 'chmod go-rw %s'."
+msgstr "Voer bijvoorbeeld 'chmod go-rw %s' uit."
+
+#: ../linkcheck/configuration/confparse.py:290
+#, python-format
+msgid "See %(url)s for more info on setting file permissions."
+msgstr ""
+"Zie %(url)s voor meer informatie over het instellen van bestandsmachtigingen."
+
+#: ../linkcheck/lc_cgi.py:215
+#, fuzzy, python-format
+msgid "could not set locale %r: %s"
+msgstr "kon geen content krijgen: %(msg)s"
+
+#: ../linkcheck/lc_cgi.py:217
+#, python-format
+msgid "unsupported language %r"
+msgstr "niet-ondersteunde taal %r"
+
+#: ../linkcheck/lc_cgi.py:222
+msgid "empty url was given"
+msgstr "lege url werd gegeven"
+
+#: ../linkcheck/lc_cgi.py:224
+#, python-format
+msgid "disallowed url %r was given"
+msgstr "niet-toegestane url %r werd gegeven"
+
+#: ../linkcheck/lc_cgi.py:226
+msgid "no url was given"
+msgstr "geen url werd gegeven"
+
+#: ../linkcheck/lc_cgi.py:231
+#, python-format
+msgid "invalid recursion level %r"
+msgstr "ongeldig recursieniveau %r"
+
+#: ../linkcheck/lc_cgi.py:237
+#, python-format
+msgid "invalid %s option %r"
+msgstr "ongeldige %s optie %r"
+
+#: ../linkcheck/lc_cgi.py:264
+#, python-format
+msgid ""
+"<!DOCTYPE HTML>\n"
+"<html><head>\n"
+"<meta http-equiv=\"Content-Type\" content=\"text/html; "
+"charset=ISO-8859-1\">\n"
+"<title>LinkChecker Online Error</title></head>\n"
+"<body text=#192c83 bgcolor=#fff7e5 link=#191c83 vlink=#191c83 "
+"alink=#191c83>\n"
+"<blockquote>\n"
+"<b>Error: %s</b><br/>\n"
+"The LinkChecker Online script has encountered an error. Please ensure\n"
+"that your provided URL link begins with <code>http://</code> and\n"
+"contains only these characters: <code>A-Za-z0-9./_~-</code><br/><br/>\n"
+"Errors are logged.\n"
+"</blockquote>\n"
+"</body>\n"
+"</html>"
+msgstr ""
+"<!DOCTYPE HTML>\n"
+"<html><head>\n"
+"<meta http-equiv=\"Content-Type\" content=\"text/html; "
+"charset=ISO-8859-1\">\n"
+"<title>LinkChecker Online fout</title></head>\n"
+"<body text=\"#192c83\" bgcolor=\"#fff7e5\" link=\"#191c83\" "
+"vlink=\"#191c83\" alink=\"#191c83\">\n"
+"<blockquote>\n"
+"<b>Fout: %s</b><br/>Er is een fout opgetreden in het script LinkChecker "
+"Online. Zorg ervoor \n"
+"dat uw meegeleverde URL-koppeling begint met <code>http://</code> en\n"
+"alleen deze tekens bevat: <code>A-Za-z0-9./_~-</code><br/><br/>\n"
+"Fouten worden geregistreerd.</blockquote>\n"
+"</body>\n"
+"</html>"
+
+#: ../linkcheck/checker/fileurl.py:142
+#, python-format
+msgid "Could not get current working directory: %(msg)s"
+msgstr "Kan de huidige werkmap niet krijgen: %(msg)s"
+
+#: ../linkcheck/checker/fileurl.py:175 ../linkcheck/checker/fileurl.py:339
+msgid "Added trailing slash to directory."
+msgstr "Schuine streep toegevoegd aan de map."
+
+#: ../linkcheck/checker/fileurl.py:198 ../linkcheck/checker/fileurl.py:352
+msgid ""
+"local files are only checked without parent URL or when the parent URL is "
+"also a file"
+msgstr ""
+"lokale bestanden worden alleen gecontroleerd zonder bovenliggende URL of "
+"wanneer de bovenliggende URL ook een bestand is"
+
+#: ../linkcheck/checker/fileurl.py:203 ../linkcheck/checker/fileurl.py:367
+msgid "directory"
+msgstr "folder"
+
+#: ../linkcheck/checker/fileurl.py:222
+#, python-format
+msgid ""
+"The URL path %(path)r is not the same as the system path %(realpath)r. You "
+"should always use the system path in URLs."
+msgstr ""
+"Het URL-pad %(path)r is niet hetzelfde als het systeempad %(realpath)r. U "
+"moet het systeempad altijd gebruiken in URL's."
+
+#: ../linkcheck/checker/fileurl.py:360
+#, python-format
+msgid ""
+"URL `%s' is a directory with an anchor. When checking local files "
+"AnchorCheck does not support anchors for directories."
+msgstr ""
+"URL `%s' is een directory met een anker. Bij het controleren van lokale "
+"bestanden ondersteunt AnchorCheck geen ankers voor mappen."
+
+#: ../linkcheck/checker/itmsservicesurl.py:31
+msgid "Missing required url parameter"
+msgstr "Ontbrekende vereiste url-parameter"
+
+#: ../linkcheck/checker/urlbase.py:79
+#, python-format
+msgid "URL has unparsable domain name: %(name)s"
+msgstr "URL heeft unparsable domeinnaam: %(name)s"
+
+#: ../linkcheck/checker/urlbase.py:163
+msgid "The URL is outside of the domain filter, checked only syntax."
+msgstr ""
+"De URL bevindt zich buiten het domeinfilter. Alleen de syntaxis "
+"gecontroleerd."
+
+#: ../linkcheck/checker/urlbase.py:166
+msgid "filtered"
+msgstr "gefilterd"
+
+#: ../linkcheck/checker/urlbase.py:216
+#, python-format
+msgid "Leading or trailing whitespace in URL `%(url)s'."
+msgstr "Whitespace leiden of achtervolgen in URL `%(url)s'."
+
+#: ../linkcheck/checker/urlbase.py:340
+#, python-format
+msgid "The URL with content type %r is not parseable."
+msgstr "De URL met inhoudstype %r is niet te parseren."
+
+#: ../linkcheck/checker/urlbase.py:445
+msgid "URL is empty"
+msgstr "URL is leeg"
+
+#: ../linkcheck/checker/urlbase.py:460
+#, python-format
+msgid "Effective URL %(url)r."
+msgstr "Effectieve URL %(url)r."
+
+#: ../linkcheck/checker/urlbase.py:467
+#, python-format
+msgid "URL length %(len)d is longer than %(max)d."
+msgstr "URL-lengte %(len)d is langer dan %(max)d."
+
+#: ../linkcheck/checker/urlbase.py:517 ../linkcheck/checker/urlbase.py:523
+#, python-format
+msgid "URL host %(host)r has invalid port"
+msgstr "URL-host %(host)r heeft ongeldige poort"
+
+#: ../linkcheck/checker/urlbase.py:530
+msgid "URL has empty hostname"
+msgstr "URL heeft lege hostnaam"
+
+#: ../linkcheck/checker/urlbase.py:555
+#, python-format
+msgid "URL %(url)s has obfuscated IP address %(ip)s"
+msgstr "URL %(url)s heeft verborgen IP-adres %(ip)s"
+
+#: ../linkcheck/checker/urlbase.py:591
+msgid "Hostname not found"
+msgstr "Hostname niet gevonden"
+
+#: ../linkcheck/checker/urlbase.py:594
+#, python-format
+msgid "Bad hostname %(host)r: %(msg)s"
+msgstr "Bad hostnaam %(host)r: %(msg)s"
+
+#: ../linkcheck/checker/urlbase.py:614
+#, python-format
+msgid "could not get content: %(msg)s"
+msgstr "kon geen content krijgen: %(msg)s"
+
+#: ../linkcheck/checker/urlbase.py:669
+#, python-format
+msgid "Content size %(size)s is larger than %(maxbytes)s."
+msgstr "De content grootte %(size)s is groter dan %(maxbytes)s."
+
+#: ../linkcheck/checker/urlbase.py:763
+msgid "Content size is zero."
+msgstr "De content grootte is nul."
+
+#: ../linkcheck/checker/urlbase.py:800 ../linkcheck/checker/httpurl.py:348
+msgid "File size too large"
+msgstr "Bestand te groot"
+
+#: ../linkcheck/checker/urlbase.py:881
+#, python-format
+msgid "URL has unparsable domain name: %(domain)s"
+msgstr "URL heeft unparsable domeinnaam: %(domain)s"
+
+#: ../linkcheck/checker/unknownurl.py:32
+#, python-format
+msgid "%(scheme)s URL ignored."
+msgstr "URL van %(scheme)s genegeerd."
+
+#: ../linkcheck/checker/unknownurl.py:34
+msgid "ignored"
+msgstr "genegeerd"
+
+#: ../linkcheck/checker/unknownurl.py:36
+msgid "URL is unrecognized or has invalid syntax"
+msgstr "URL is niet herkend of heeft ongeldige syntaxis"
+
+#: ../linkcheck/checker/mailtourl.py:88
+#, python-format
+msgid "No mail addresses or email subject found in `%(url)s'."
+msgstr "Geen e-mailadressen of e-mailonderwerpen gevonden in '%(url)s'."
+
+#: ../linkcheck/checker/mailtourl.py:132
+#, python-format
+msgid "Error parsing CGI values: %s"
+msgstr "Fout parsing CGI waarden: %s"
+
+#: ../linkcheck/checker/mailtourl.py:158
+#, python-format
+msgid ""
+"Mail address `%(addr)s' too long. Allowed 256 chars, was %(length)d chars."
+msgstr ""
+"E-mailadres '%(addr)s' te lang. Toegestaan zijn 256 tekens, was %(length)d "
+"tekens."
+
+#: ../linkcheck/checker/mailtourl.py:168
+#, python-format
+msgid "Missing `@' in mail address `%(addr)s'."
+msgstr "Ontbrekende '@' in e-mailadres '%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:177
+#, python-format
+msgid "Missing local part of mail address `%(addr)s'."
+msgstr "Ontbrekend lokaal deel van e-mailadres '%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:184
+#, python-format
+msgid "Missing domain part of mail address `%(addr)s'."
+msgstr "Ontbrekend domeingedeelte van e-mailadres '%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:192
+#, python-format
+msgid ""
+"Local part of mail address `%(addr)s' too long. Allowed 64 chars, was "
+"%(length)d chars."
+msgstr ""
+"Lokaal deel van e-mailadres '%(addr)s' te lang. Toegestaan 64 tekens, was "
+"%(length)d tekens."
+
+#: ../linkcheck/checker/mailtourl.py:203
+#, python-format
+msgid ""
+"Domain part of mail address `%(addr)s' too long. Allowed 255 chars, was "
+"%(length)d chars."
+msgstr ""
+"Domeinonderdeel van e-mailadres '%(addr)s' te lang. Toegestaan 255 tekens, "
+"was %(length)d tekens."
+
+#: ../linkcheck/checker/mailtourl.py:218
+#, python-format
+msgid "Unquoted double quote or backslash in mail address `%(addr)s'."
+msgstr ""
+"Niet-geciteerde dubbele aanhalingstekens of schuine streep in e-mailadres "
+"'%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:227
+#, python-format
+msgid "Local part of mail address `%(addr)s' may not start with a dot."
+msgstr "Lokaal deel van e-mailadres '%(addr)s' mag niet beginnen met een punt."
+
+#: ../linkcheck/checker/mailtourl.py:235
+#, python-format
+msgid "Local part of mail address `%(addr)s' may not end with a dot."
+msgstr "Lokaal deel van e-mailadres '%(addr)s' mag niet eindigen met een punt."
+
+#: ../linkcheck/checker/mailtourl.py:243
+#, python-format
+msgid "Local part of mail address `%(addr)s' may not contain two dots."
+msgstr ""
+"Het lokale deel van het e-mailadres '%(addr)s' mag geen dubbele punten "
+"bevatten."
+
+#: ../linkcheck/checker/mailtourl.py:253
+#, python-format
+msgid ""
+"Local part of mail address `%(addr)s' contains unquoted character `%(char)s."
+msgstr ""
+"Lokaal deel van e-mailadres `%(addr)s' bevat niet-geciteerd teken `%(char)s."
+
+#: ../linkcheck/checker/mailtourl.py:271
+#, python-format
+msgid "Domain part of mail address `%(addr)s' has invalid IP."
+msgstr "Domeinonderdeel van e-mailadres `%(addr)s' heeft ongeldig IP."
+
+#: ../linkcheck/checker/mailtourl.py:281
+#, python-format
+msgid "Invalid domain part of mail address `%(addr)s'."
+msgstr "Ongeldig domeinonderdeel van e-mailadres `%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:289
+#, python-format
+msgid "Invalid top level domain part of mail address `%(addr)s'."
+msgstr "Ongeldig domeindeel op het hoogste niveau van e-mailadres `%(addr)s'."
+
+#: ../linkcheck/checker/mailtourl.py:327
+#, python-format
+msgid "No MX mail host for %(domain)s found."
+msgstr "Er is geen MX-mailhost voor %(domain)s gevonden."
+
+#: ../linkcheck/checker/mailtourl.py:336
+#, python-format
+msgid "No host for %(domain)s found."
+msgstr "Er is geen host voor %(domain)s gevonden."
+
+#: ../linkcheck/checker/mailtourl.py:353
+#, python-format
+msgid "Got invalid DNS answer %(answer)s for %(domain)s."
+msgstr "Ongeldig DNS-antwoord %(answer)s voor %(domain)s."
+
+#: ../linkcheck/checker/mailtourl.py:366
+msgid "Valid mail address syntax"
+msgstr "Geldige syntaxis van het e-mailadres"
+
+#: ../linkcheck/checker/const.py:99
+msgid "The effective URL is different from the original."
+msgstr "De effectieve URL is anders dan het origineel."
+
+#: ../linkcheck/checker/const.py:100
+msgid "Could not get the content of the URL."
+msgstr "Kan de content van de URL niet krijgen."
+
+#: ../linkcheck/checker/const.py:101
+msgid "The URL content size is too large."
+msgstr "De grootte van de URL-inhoud is te groot."
+
+#: ../linkcheck/checker/const.py:102
+msgid "The URL content size is zero."
+msgstr "De grootte van de URL-inhoud is nul."
+
+#: ../linkcheck/checker/const.py:103
+msgid "The URL content type is not parseable."
+msgstr "Het URL-inhoudstype kan niet worden geparseerd."
+
+#: ../linkcheck/checker/const.py:104
+msgid "The URL is longer than the recommended size."
+msgstr "De URL is langer dan de aanbevolen grootte."
+
+#: ../linkcheck/checker/const.py:105
+msgid "The URL contains leading or trailing whitespace."
+msgstr "De URL bevat toonaangevende of nakomende spaties."
+
+#: ../linkcheck/checker/const.py:106
+msgid "The file: URL is missing a trailing slash."
+msgstr "Het bestand: URL mist een schuine eindstreep."
+
+#: ../linkcheck/checker/const.py:108
+msgid "The file: path is not the same as the system specific path."
+msgstr "Het bestand: pad is niet hetzelfde als het systeemspecifieke pad."
+
+#: ../linkcheck/checker/const.py:111
+msgid "A local directory with an anchor, not supported by AnchorCheck."
+msgstr "Een lokale directory met een anker, niet ondersteund door AnchorCheck."
+
+#: ../linkcheck/checker/const.py:112
+msgid "The ftp: URL is missing a trailing slash."
+msgstr "De ftp: URL mist een afsluitende schuine streep."
+
+#: ../linkcheck/checker/const.py:113
+msgid "The URL had no content."
+msgstr "De URL had geen inhoud."
+
+#: ../linkcheck/checker/const.py:114
+msgid "An error occurred while storing a cookie."
+msgstr "Er is een fout opgetreden tijdens het opslaan van een cookie."
+
+#: ../linkcheck/checker/const.py:115
+msgid "The URL request was rate limited."
+msgstr "Het URL-verzoek was beperkt."
+
+#: ../linkcheck/checker/const.py:116
+msgid "Redirected to a different URL."
+msgstr ""
+
+#: ../linkcheck/checker/const.py:117
+msgid "The mail MX host could not be found."
+msgstr "De E-mail MX-host kon niet worden gevonden."
+
+#: ../linkcheck/checker/const.py:118
+msgid "The IP is obfuscated."
+msgstr "De IP is verborgen."
+
+#: ../linkcheck/checker/const.py:119
+msgid "XML could not be parsed."
+msgstr "XML kon niet worden ontleed."
+
+#: ../linkcheck/checker/ftpurl.py:75
+msgid "Got no answer from FTP server"
+msgstr "Heb je geen antwoord van FTP-server"
+
+#: ../linkcheck/checker/ftpurl.py:78
+#, python-format
+msgid "Remote host has closed connection: %(msg)s"
+msgstr "Externe host heeft verbinding met %(msg)s verbroken"
+
+#: ../linkcheck/checker/ftpurl.py:124
+msgid "Missing trailing directory slash in ftp url."
+msgstr "Ontbrekende eind schuine streep voor folder in ftp url."
+
+#: ../linkcheck/checker/ftpurl.py:188
+msgid "FTP file size too large"
+msgstr "FTP-bestandsgrootte te groot"
+
+#: ../linkcheck/checker/httpurl.py:138
+msgid "Access denied by robots.txt, checked only syntax."
+msgstr "Toegang geweigerd door robots.txt, alleen syntaxis gecontroleerd."
+
+#: ../linkcheck/checker/httpurl.py:139
+msgid "syntax OK"
+msgstr "syntaxis OK"
+
+#: ../linkcheck/checker/httpurl.py:283
+#, fuzzy, python-format
+msgid "Redirected to `%(url)s' status: %(code)d %(reason)s."
+msgstr "Doorgestuurd naar `%(url)s'."
+
+#: ../linkcheck/checker/httpurl.py:336
+msgid "OK"
+msgstr "OK"
+
+#: ../linkcheck/checker/dnsurl.py:46
+#, python-format
+msgid "%(host)s resolved to IPs %(ips)s"
+msgstr "%(host)s opgelost voor IPS %(ips)s"
+
+#: ../linkcheck/checker/dnsurl.py:48
+#, python-format
+msgid "%(host)r could not be resolved"
+msgstr "%(host)r kan niet worden opgelost"
 
 #: ../linkcheck/command/setup_config.py:49
 msgid "Running with python -O disables debugging."
@@ -230,6 +911,61 @@ msgstr "Configuratiebestand %r bestaat niet."
 #, python-format
 msgid "Could not read cookie file %s"
 msgstr "Kan cookie-bestand %s  niet lezen"
+
+#: ../linkcheck/command/linkchecker.py:50
+msgid "Running as root user; dropping privileges by changing user to nobody."
+msgstr ""
+"Wordt uitgevoerd als hoofdgebruiker; privileges worden verwijderd door de "
+"gebruiker in niemand te veranderen."
+
+#: ../linkcheck/command/linkchecker.py:124
+#, python-format
+msgid "Invalid debug level %(level)r"
+msgstr "Ongeldig debugniveau %(level)r"
+
+#: ../linkcheck/command/linkchecker.py:140
+#, fuzzy, python-format
+msgid "Config file %s does not exist."
+msgstr "Configuratiebestand %r bestaat niet."
+
+#: ../linkcheck/command/linkchecker.py:143
+#, fuzzy, python-format
+msgid "Could not read config file %s."
+msgstr "Kan cookie-bestand %s  niet lezen"
+
+#: ../linkcheck/command/linkchecker.py:176
+msgid "no files or URLs given"
+msgstr "geen bestanden of URL's gegeven"
+
+#: ../linkcheck/command/linkchecker.py:184
+#, python-format
+msgid ""
+"Overwrite profiling file %(file)r?\n"
+"Press Ctrl-C to cancel, RETURN to continue."
+msgstr ""
+"Overschrijven profilering bestand %(file)r?\n"
+"Druk op Ctrl-C om te annuleren, RETURN om door te gaan."
+
+#: ../linkcheck/command/linkchecker.py:192
+msgid "Canceled."
+msgstr "Geannuleerd."
+
+#: ../linkcheck/command/linkchecker.py:199
+msgid ""
+"The `yappi' Python module is not installed, therefore the --profile option "
+"is disabled."
+msgstr ""
+"De 'yappi' Python module is niet geïnstalleerd, daarom is de --profiel optie "
+"uitgeschakeld."
+
+#: ../linkcheck/command/linkchecker.py:218
+msgid "Dumping memory statistics..."
+msgstr "Dumping geheugen statistieken ..."
+
+#: ../linkcheck/command/linkchecker.py:220
+#, python-format
+msgid "The memory dump has been written to `%(filename)s'."
+msgstr "De geheugendump is geschreven naar '%(filename)s'."
 
 #: ../linkcheck/command/arg_parser.py:28
 #, fuzzy
@@ -750,365 +1486,45 @@ msgstr ""
 "de huidige\n"
 "versie van LinkChecker."
 
-#: ../linkcheck/command/linkchecker.py:50
-msgid "Running as root user; dropping privileges by changing user to nobody."
-msgstr ""
-"Wordt uitgevoerd als hoofdgebruiker; privileges worden verwijderd door de "
-"gebruiker in niemand te veranderen."
-
-#: ../linkcheck/command/linkchecker.py:124
-#, python-format
-msgid "Invalid debug level %(level)r"
-msgstr "Ongeldig debugniveau %(level)r"
-
-#: ../linkcheck/command/linkchecker.py:140
-#, fuzzy, python-format
-msgid "Config file %s does not exist."
-msgstr "Configuratiebestand %r bestaat niet."
-
-#: ../linkcheck/command/linkchecker.py:143
-#, fuzzy, python-format
-msgid "Could not read config file %s."
-msgstr "Kan cookie-bestand %s  niet lezen"
-
-#: ../linkcheck/command/linkchecker.py:176
-msgid "no files or URLs given"
-msgstr "geen bestanden of URL's gegeven"
-
-#: ../linkcheck/command/linkchecker.py:184
-#, python-format
-msgid ""
-"Overwrite profiling file %(file)r?\n"
-"Press Ctrl-C to cancel, RETURN to continue."
-msgstr ""
-"Overschrijven profilering bestand %(file)r?\n"
-"Druk op Ctrl-C om te annuleren, RETURN om door te gaan."
-
-#: ../linkcheck/command/linkchecker.py:192
-msgid "Canceled."
-msgstr "Geannuleerd."
-
-#: ../linkcheck/command/linkchecker.py:199
-msgid ""
-"The `yappi' Python module is not installed, therefore the --profile option "
-"is disabled."
-msgstr ""
-"De 'yappi' Python module is niet geïnstalleerd, daarom is de --profiel optie "
-"uitgeschakeld."
-
-#: ../linkcheck/command/linkchecker.py:218
-msgid "Dumping memory statistics..."
-msgstr "Dumping geheugen statistieken ..."
-
-#: ../linkcheck/command/linkchecker.py:220
-#, python-format
-msgid "The memory dump has been written to `%(filename)s'."
-msgstr "De geheugendump is geschreven naar '%(filename)s'."
-
-#: ../linkcheck/lc_cgi.py:215
-#, fuzzy, python-format
-msgid "could not set locale %r: %s"
-msgstr "kon geen content krijgen: %(msg)s"
-
-#: ../linkcheck/lc_cgi.py:217
-#, python-format
-msgid "unsupported language %r"
-msgstr "niet-ondersteunde taal %r"
-
-#: ../linkcheck/lc_cgi.py:222
-msgid "empty url was given"
-msgstr "lege url werd gegeven"
-
-#: ../linkcheck/lc_cgi.py:224
-#, python-format
-msgid "disallowed url %r was given"
-msgstr "niet-toegestane url %r werd gegeven"
-
-#: ../linkcheck/lc_cgi.py:226
-msgid "no url was given"
-msgstr "geen url werd gegeven"
-
-#: ../linkcheck/lc_cgi.py:231
-#, python-format
-msgid "invalid recursion level %r"
-msgstr "ongeldig recursieniveau %r"
-
-#: ../linkcheck/lc_cgi.py:237
-#, python-format
-msgid "invalid %s option %r"
-msgstr "ongeldige %s optie %r"
-
-#: ../linkcheck/lc_cgi.py:264
-#, python-format
-msgid ""
-"<!DOCTYPE HTML>\n"
-"<html><head>\n"
-"<meta http-equiv=\"Content-Type\" content=\"text/html; "
-"charset=ISO-8859-1\">\n"
-"<title>LinkChecker Online Error</title></head>\n"
-"<body text=#192c83 bgcolor=#fff7e5 link=#191c83 vlink=#191c83 "
-"alink=#191c83>\n"
-"<blockquote>\n"
-"<b>Error: %s</b><br/>\n"
-"The LinkChecker Online script has encountered an error. Please ensure\n"
-"that your provided URL link begins with <code>http://</code> and\n"
-"contains only these characters: <code>A-Za-z0-9./_~-</code><br/><br/>\n"
-"Errors are logged.\n"
-"</blockquote>\n"
-"</body>\n"
-"</html>"
-msgstr ""
-"<!DOCTYPE HTML>\n"
-"<html><head>\n"
-"<meta http-equiv=\"Content-Type\" content=\"text/html; "
-"charset=ISO-8859-1\">\n"
-"<title>LinkChecker Online fout</title></head>\n"
-"<body text=\"#192c83\" bgcolor=\"#fff7e5\" link=\"#191c83\" "
-"vlink=\"#191c83\" alink=\"#191c83\">\n"
-"<blockquote>\n"
-"<b>Fout: %s</b><br/>Er is een fout opgetreden in het script LinkChecker "
-"Online. Zorg ervoor \n"
-"dat uw meegeleverde URL-koppeling begint met <code>http://</code> en\n"
-"alleen deze tekens bevat: <code>A-Za-z0-9./_~-</code><br/><br/>\n"
-"Fouten worden geregistreerd.</blockquote>\n"
-"</body>\n"
-"</html>"
-
-#: ../linkcheck/plugins/markdowncheck.py:88
-#: ../linkcheck/plugins/regexcheck.py:45
-#, fuzzy, python-format
-msgid "Invalid regex pattern %r: %s"
-msgstr "ongeldige lege waarde voor %s: %s\n"
-
-#: ../linkcheck/plugins/sslcertcheck.py:70
-msgid "certificate did not include \"notAfter\" information"
-msgstr "certificaat bevat geen \"notAfter\" informatie"
-
-#: ../linkcheck/plugins/sslcertcheck.py:73
-msgid "SSL verification is disabled; enable the sslverify option"
-msgstr "SSL-verificatie is uitgeschakeld; de optie sslverify inschakelen"
-
-#: ../linkcheck/plugins/sslcertcheck.py:85
-#, python-format
-msgid "Invalid SSL certificate \"notAfter\" value %r"
-msgstr "Ongeldig SSL-certificaat \"notAfter\" waarde %r"
-
-#: ../linkcheck/plugins/sslcertcheck.py:94
-#, python-format
-msgid "SSL certificate is expired on %(expire)s."
-msgstr "SSL-certificaat is verlopen op %(expire)s."
-
-#: ../linkcheck/plugins/sslcertcheck.py:100
-#, python-format
-msgid "SSL certificate expires on %(expire)s and is only %(valid)s valid."
-msgstr ""
-"SSL-certificaat verloopt op %(expire)s en is alleen geldig voor %(valid)s."
-
-#: ../linkcheck/plugins/sslcertcheck.py:104
-#, python-format
-msgid "SSL certificate expires on %(expire)s and is %(valid)s valid."
-msgstr "SSL-certificaat verloopt op %(expire)s en is %(valid)s geldig."
-
-#: ../linkcheck/plugins/sslcertcheck.py:118
-#: ../linkcheck/configuration/confparse.py:98
-#: ../linkcheck/configuration/confparse.py:116
-#, python-format
-msgid "invalid value for %s: %d must not be less than %d"
-msgstr "ongeldige waarde voor %s: %d mag niet lager zijn dan %d"
-
-#: ../linkcheck/plugins/viruscheck.py:101
-msgid "clamd is not ready for stream scanning"
-msgstr "clamd is niet klaar voor stream scanning"
-
-#: ../linkcheck/plugins/viruscheck.py:160
-msgid "ScannerDaemonOutputFormat must be disabled"
-msgstr "ScannerDaemonOutputFormat moet zijn uitgeschakeld"
-
-#: ../linkcheck/plugins/viruscheck.py:163
-msgid "only one of TCPSocket and LocalSocket must be enabled"
-msgstr "slechts één van TCPSocket en LocalSocket moet ingeschakeld zijn"
-
-#: ../linkcheck/plugins/viruscheck.py:193
-msgid "one of TCPSocket or LocalSocket must be enabled"
-msgstr "één van TCPSocket of LocalSocket moet ingeschakeld zijn"
-
-#: ../linkcheck/plugins/viruscheck.py:229
-msgid "Could not connect to ClamAV daemon."
-msgstr "Kon geen verbinding maken met ClamAV daemon."
-
-#: ../linkcheck/plugins/locationinfo.py:46
-#, python-format
-msgid "URL is located in %(location)s."
-msgstr "URL bevindt zich in %(location)s."
-
-#: ../linkcheck/plugins/regexcheck.py:61
-#, python-format
-msgid "Found %(match)r at line %(line)d in link contents."
-msgstr "Gevonden %(match)r bij regel %(line)d in de inhoud van de koppeling."
-
-#: ../linkcheck/plugins/syntaxchecks.py:56
-msgid "HTML syntax check plugin is broken. Fixes welcome."
-msgstr "HTML syntax check plugin is kapot. Fixes welkom."
-
-#: ../linkcheck/plugins/syntaxchecks.py:74
-msgid "valid HTML syntax"
-msgstr "geldige HTML-syntaxis"
-
-#: ../linkcheck/plugins/syntaxchecks.py:81
-#, python-format
-msgid "HTML syntax check plugin error: %(msg)s "
-msgstr "HTML-syntaxiscontrole-plugin fout: %(msg)s "
-
-#: ../linkcheck/plugins/syntaxchecks.py:114
-msgid "valid CSS syntax"
-msgstr "geldige CSS-syntaxis"
-
-#: ../linkcheck/plugins/syntaxchecks.py:121
-#, python-format
-msgid "CSS syntax check plugin error: %(msg)s "
-msgstr "CSS syntaxiscontrole-plugin fout: %(msg)s "
-
-#: ../linkcheck/plugins/syntaxchecks.py:132
-#, python-format
-msgid "%(w3type)s validation error at line %(line)s col %(column)s: %(msg)s"
-msgstr "%(w3type)s validatiefout bij regel %(line)s col %(column)s: %(msg)s"
-
-#: ../linkcheck/plugins/syntaxchecks.py:136
-#, python-format
-msgid "%(w3type)s validation error at line %(line)s: %(msg)s"
-msgstr "%(w3type)s validatiefout bij regel %(line)s: %(msg)s"
-
-#: ../linkcheck/plugins/anchorcheck.py:70
-#, python-format
-msgid "Anchor `%(name)s' (decoded: `%(decoded)s') not found."
-msgstr "Anker '%(name)s' (gedecodeerd: '%(decoded)s') niet gevonden."
-
-#: ../linkcheck/plugins/anchorcheck.py:71
-#, python-format
-msgid "Available anchors: %(anchors)s."
-msgstr "Beschikbare ankers: %(anchors)s."
-
-#: ../linkcheck/logger/text.py:65
-msgid "Invalid value for wraplength. Using default."
-msgstr ""
-
-#: ../linkcheck/logger/text.py:105 ../linkcheck/logger/__init__.py:385
-#, python-format
-msgid "Read the documentation at %(url)s"
-msgstr "Lees de documentatie op %(url)s"
-
-#: ../linkcheck/logger/text.py:108 ../linkcheck/logger/__init__.py:388
-#, python-format
-msgid "Write comments and bugs to %(url)s"
-msgstr "Opmerkingen en bugs schrijven naar %(url)s"
-
-#: ../linkcheck/logger/text.py:112 ../linkcheck/logger/html.py:127
+#: ../linkcheck/logger/html.py:127 ../linkcheck/logger/text.py:112
 #, python-format
 msgid "Start checking at %s"
 msgstr "Begin met controleren op %s"
 
-#: ../linkcheck/logger/text.py:165 ../linkcheck/logger/html.py:203
+#: ../linkcheck/logger/html.py:203 ../linkcheck/logger/text.py:165
 #, python-format
 msgid ", line %d"
 msgstr ", regel %d"
 
-#: ../linkcheck/logger/text.py:167 ../linkcheck/logger/html.py:205
+#: ../linkcheck/logger/html.py:205 ../linkcheck/logger/text.py:167
 #, python-format
 msgid ", col %d"
 msgstr ", kolom %d"
 
-#: ../linkcheck/logger/text.py:169 ../linkcheck/logger/html.py:207
+#: ../linkcheck/logger/html.py:207 ../linkcheck/logger/text.py:169
 #, python-format
 msgid ", page %d"
 msgstr ", pagina %d"
 
-#: ../linkcheck/logger/text.py:185 ../linkcheck/logger/text.py:195
 #: ../linkcheck/logger/html.py:246 ../linkcheck/logger/html.py:266
+#: ../linkcheck/logger/text.py:185 ../linkcheck/logger/text.py:195
 #, python-format
 msgid "%.3f seconds"
 msgstr "%.3f seconden"
 
-#: ../linkcheck/logger/text.py:218 ../linkcheck/logger/html.py:311
+#: ../linkcheck/logger/html.py:311 ../linkcheck/logger/text.py:218
 msgid "Valid"
 msgstr "Geldig"
 
-#: ../linkcheck/logger/text.py:221 ../linkcheck/logger/html.py:316
+#: ../linkcheck/logger/html.py:316 ../linkcheck/logger/text.py:221
 msgid "Error"
 msgstr "Fout"
 
-#: ../linkcheck/logger/text.py:230
-msgid "The check has been interrupted; results are not complete."
-msgstr "De controle is onderbroken; resultaten zijn niet compleet."
+#: ../linkcheck/logger/html.py:323
+msgid "Statistics"
+msgstr "Statistieken"
 
-#: ../linkcheck/logger/text.py:231 ../linkcheck/logger/html.py:349
-msgid "That's it."
-msgstr "Dat was het."
-
-#: ../linkcheck/logger/text.py:232
-#, python-format
-msgid "%d link"
-msgid_plural "%d links"
-msgstr[0] "%d link"
-msgstr[1] "%d links"
-
-#: ../linkcheck/logger/text.py:236
-#, python-format
-msgid "in %d URL"
-msgid_plural "in %d URLs"
-msgstr[0] "in %d URL"
-msgstr[1] "in %d URL's"
-
-#: ../linkcheck/logger/text.py:238
-msgid " checked."
-msgstr " aangevinkt."
-
-#: ../linkcheck/logger/text.py:240 ../linkcheck/logger/html.py:357
-#, python-format
-msgid "%d warning found"
-msgid_plural "%d warnings found"
-msgstr[0] "%d waarschuwing gevonden"
-msgstr[1] "%d waarschuwingen gevonden"
-
-#: ../linkcheck/logger/text.py:250 ../linkcheck/logger/html.py:362
-#, python-format
-msgid " (%d ignored or duplicates not printed)"
-msgstr " (%d genegeerd of duplicaten niet afgedrukt)"
-
-#: ../linkcheck/logger/text.py:255 ../linkcheck/logger/html.py:367
-#, python-format
-msgid "%d error found"
-msgid_plural "%d errors found"
-msgstr[0] "%d fout gevonden"
-msgstr[1] "%d fouten gevonden"
-
-#: ../linkcheck/logger/text.py:265 ../linkcheck/logger/html.py:372
-#, python-format
-msgid " (%d duplicates not printed)"
-msgstr " (%d duplicaten niet afgedrukt)"
-
-#: ../linkcheck/logger/text.py:273 ../linkcheck/logger/html.py:381
-#, python-format
-msgid "There was %(num)d internal error."
-msgid_plural "There were %(num)d internal errors."
-msgstr[0] "Er was een interne fout %(num)d."
-msgstr[1] "Er waren interne fouten %(num)d."
-
-#: ../linkcheck/logger/text.py:282 ../linkcheck/logger/html.py:391
-#: ../linkcheck/logger/__init__.py:397
-#, python-format
-msgid "Stopped checking at %(time)s (%(duration)s)"
-msgstr "Gestopt met controleren bij %(time)s (%(duration)s)"
-
-#: ../linkcheck/logger/text.py:292
-msgid "Statistics:"
-msgstr "Statistieken:"
-
-#: ../linkcheck/logger/text.py:295
-#, python-format
-msgid "Downloaded: %s."
-msgstr "Gedownload: %s."
-
-#: ../linkcheck/logger/text.py:300 ../linkcheck/logger/html.py:327
+#: ../linkcheck/logger/html.py:327 ../linkcheck/logger/text.py:300
 #, python-format
 msgid ""
 "Content types: %(image)d image, %(text)d text, %(video)d video, %(audio)d "
@@ -1117,19 +1533,19 @@ msgstr ""
 "Inhoudstypen: %(image)d image, %(text)d text, %(video)d video, %(audio)d "
 "audio, %(application)d application, %(mail)d mail en %(other)d other."
 
-#: ../linkcheck/logger/text.py:307 ../linkcheck/logger/html.py:335
+#: ../linkcheck/logger/html.py:335 ../linkcheck/logger/text.py:307
 #, python-format
 msgid "URL lengths: min=%(min)d, max=%(max)d, avg=%(avg)d."
 msgstr "URL lengtes: min=%(min)d, max=%(max)d, avg=%(avg)d."
 
-#: ../linkcheck/logger/text.py:315 ../linkcheck/logger/html.py:343
+#: ../linkcheck/logger/html.py:343 ../linkcheck/logger/text.py:315
 msgid "No statistics available since no URLs were checked."
 msgstr ""
 "Er zijn geen statistieken beschikbaar omdat er geen URL's zijn gecontroleerd."
 
-#: ../linkcheck/logger/html.py:323
-msgid "Statistics"
-msgstr "Statistieken"
+#: ../linkcheck/logger/html.py:349 ../linkcheck/logger/text.py:231
+msgid "That's it."
+msgstr "Dat was het."
 
 #: ../linkcheck/logger/html.py:352
 #, python-format
@@ -1137,6 +1553,43 @@ msgid "%d link checked."
 msgid_plural "%d links checked."
 msgstr[0] "%d link gecontroleerd."
 msgstr[1] "%d links gecontroleerd."
+
+#: ../linkcheck/logger/html.py:357 ../linkcheck/logger/text.py:240
+#, python-format
+msgid "%d warning found"
+msgid_plural "%d warnings found"
+msgstr[0] "%d waarschuwing gevonden"
+msgstr[1] "%d waarschuwingen gevonden"
+
+#: ../linkcheck/logger/html.py:362 ../linkcheck/logger/text.py:250
+#, python-format
+msgid " (%d ignored or duplicates not printed)"
+msgstr " (%d genegeerd of duplicaten niet afgedrukt)"
+
+#: ../linkcheck/logger/html.py:367 ../linkcheck/logger/text.py:255
+#, python-format
+msgid "%d error found"
+msgid_plural "%d errors found"
+msgstr[0] "%d fout gevonden"
+msgstr[1] "%d fouten gevonden"
+
+#: ../linkcheck/logger/html.py:372 ../linkcheck/logger/text.py:265
+#, python-format
+msgid " (%d duplicates not printed)"
+msgstr " (%d duplicaten niet afgedrukt)"
+
+#: ../linkcheck/logger/html.py:381 ../linkcheck/logger/text.py:273
+#, python-format
+msgid "There was %(num)d internal error."
+msgid_plural "There were %(num)d internal errors."
+msgstr[0] "Er was een interne fout %(num)d."
+msgstr[1] "Er waren interne fouten %(num)d."
+
+#: ../linkcheck/logger/html.py:391 ../linkcheck/logger/__init__.py:397
+#: ../linkcheck/logger/text.py:282
+#, python-format
+msgid "Stopped checking at %(time)s (%(duration)s)"
+msgstr "Gestopt met controleren bij %(time)s (%(duration)s)"
 
 #: ../linkcheck/logger/html.py:401
 #, python-format
@@ -1147,6 +1600,16 @@ msgstr "Lees de documentatie op %s"
 #, python-format
 msgid "Write comments and bugs to %s"
 msgstr "Schrijf opmerkingen en bugs naar %s"
+
+#: ../linkcheck/logger/failures.py:47
+#, python-format
+msgid "%(blacklist)s file is deprecated please rename to failures"
+msgstr "%(blacklist)s bestand is afgeschaft, hernoem naar failures"
+
+#: ../linkcheck/logger/failures.py:99
+#, python-format
+msgid "invalid line starting with '%(linestart)s' in %(failures)s"
+msgstr "ongeldige regel die begint met '%(linestart)s' in %(failures)s"
 
 #: ../linkcheck/logger/__init__.py:31
 msgid "Real URL"
@@ -1219,20 +1682,50 @@ msgstr ""
 msgid "created by %(app)s at %(time)s"
 msgstr "gemaakt door %(app)s op %(time)s"
 
-#: ../linkcheck/logger/failures.py:47
+#: ../linkcheck/logger/__init__.py:385 ../linkcheck/logger/text.py:105
 #, python-format
-msgid "%(blacklist)s file is deprecated please rename to failures"
-msgstr "%(blacklist)s bestand is afgeschaft, hernoem naar failures"
+msgid "Read the documentation at %(url)s"
+msgstr "Lees de documentatie op %(url)s"
 
-#: ../linkcheck/logger/failures.py:99
+#: ../linkcheck/logger/__init__.py:388 ../linkcheck/logger/text.py:108
 #, python-format
-msgid "invalid line starting with '%(linestart)s' in %(failures)s"
-msgstr "ongeldige regel die begint met '%(linestart)s' in %(failures)s"
+msgid "Write comments and bugs to %(url)s"
+msgstr "Opmerkingen en bugs schrijven naar %(url)s"
 
-#: ../linkcheck/cache/robots_txt.py:77
+#: ../linkcheck/logger/text.py:65
+msgid "Invalid value for wraplength. Using default."
+msgstr ""
+
+#: ../linkcheck/logger/text.py:230
+msgid "The check has been interrupted; results are not complete."
+msgstr "De controle is onderbroken; resultaten zijn niet compleet."
+
+#: ../linkcheck/logger/text.py:232
 #, python-format
-msgid "Relative Sitemap %s in %s discarded"
-msgstr "Relatieve sitemap %s in %s verwijderd"
+msgid "%d link"
+msgid_plural "%d links"
+msgstr[0] "%d link"
+msgstr[1] "%d links"
+
+#: ../linkcheck/logger/text.py:236
+#, python-format
+msgid "in %d URL"
+msgid_plural "in %d URLs"
+msgstr[0] "in %d URL"
+msgstr[1] "in %d URL's"
+
+#: ../linkcheck/logger/text.py:238
+msgid " checked."
+msgstr " aangevinkt."
+
+#: ../linkcheck/logger/text.py:292
+msgid "Statistics:"
+msgstr "Statistieken:"
+
+#: ../linkcheck/logger/text.py:295
+#, python-format
+msgid "Downloaded: %s."
+msgstr "Gedownload: %s."
 
 #: ../linkcheck/__init__.py:77
 #, python-format
@@ -1271,11 +1764,6 @@ msgstr "FOUTOPSPORING"
 #: ../linkcheck/__init__.py:117
 msgid "NOTSET"
 msgstr "NOT SET"
-
-#: ../linkcheck/cookies.py:46
-#, fuzzy
-msgid "No entries found"
-msgstr "Er is geen NNTP-server gevonden."
 
 #: ../linkcheck/strformat.py:165
 #, python-format
@@ -1326,6 +1814,11 @@ msgstr ""
 "Kan geen %(module)s importeren voor %(feature)s. Installeer %(module)s van "
 "%(url)s om deze functie te gebruiken."
 
+#: ../linkcheck/cache/robots_txt.py:77
+#, python-format
+msgid "Relative Sitemap %s in %s discarded"
+msgstr "Relatieve sitemap %s in %s verwijderd"
+
 #: ../linkcheck/loader.py:40
 #, python-format
 msgid "WARN: could not load module %s: %s"
@@ -1336,547 +1829,68 @@ msgstr ""
 msgid "WARN: could not load file %s: %s"
 msgstr "Kan cookie-bestand %s  niet lezen"
 
-#: ../linkcheck/checker/const.py:99
-msgid "The effective URL is different from the original."
-msgstr "De effectieve URL is anders dan het origineel."
-
-#: ../linkcheck/checker/const.py:100
-msgid "Could not get the content of the URL."
-msgstr "Kan de content van de URL niet krijgen."
-
-#: ../linkcheck/checker/const.py:101
-msgid "The URL content size is too large."
-msgstr "De grootte van de URL-inhoud is te groot."
-
-#: ../linkcheck/checker/const.py:102
-msgid "The URL content size is zero."
-msgstr "De grootte van de URL-inhoud is nul."
-
-#: ../linkcheck/checker/const.py:103
-msgid "The URL content type is not parseable."
-msgstr "Het URL-inhoudstype kan niet worden geparseerd."
-
-#: ../linkcheck/checker/const.py:104
-msgid "The URL is longer than the recommended size."
-msgstr "De URL is langer dan de aanbevolen grootte."
-
-#: ../linkcheck/checker/const.py:105
-msgid "The URL contains leading or trailing whitespace."
-msgstr "De URL bevat toonaangevende of nakomende spaties."
-
-#: ../linkcheck/checker/const.py:106
-msgid "The file: URL is missing a trailing slash."
-msgstr "Het bestand: URL mist een schuine eindstreep."
-
-#: ../linkcheck/checker/const.py:108
-msgid "The file: path is not the same as the system specific path."
-msgstr "Het bestand: pad is niet hetzelfde als het systeemspecifieke pad."
-
-#: ../linkcheck/checker/const.py:111
-msgid "A local directory with an anchor, not supported by AnchorCheck."
-msgstr "Een lokale directory met een anker, niet ondersteund door AnchorCheck."
-
-#: ../linkcheck/checker/const.py:112
-msgid "The ftp: URL is missing a trailing slash."
-msgstr "De ftp: URL mist een afsluitende schuine streep."
-
-#: ../linkcheck/checker/const.py:113
-msgid "The URL had no content."
-msgstr "De URL had geen inhoud."
-
-#: ../linkcheck/checker/const.py:114
-msgid "An error occurred while storing a cookie."
-msgstr "Er is een fout opgetreden tijdens het opslaan van een cookie."
-
-#: ../linkcheck/checker/const.py:115
-msgid "The URL request was rate limited."
-msgstr "Het URL-verzoek was beperkt."
-
-#: ../linkcheck/checker/const.py:116
-msgid "Redirected to a different URL."
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:228
+#, python-format
+msgid "%(heading)s:"
 msgstr ""
 
-#: ../linkcheck/checker/const.py:117
-msgid "The mail MX host could not be found."
-msgstr "De E-mail MX-host kon niet worden gevonden."
-
-#: ../linkcheck/checker/const.py:118
-msgid "The IP is obfuscated."
-msgstr "De IP is verborgen."
-
-#: ../linkcheck/checker/const.py:119
-msgid "XML could not be parsed."
-msgstr "XML kon niet worden ontleed."
-
-#: ../linkcheck/checker/mailtourl.py:88
-#, python-format
-msgid "No mail addresses or email subject found in `%(url)s'."
-msgstr "Geen e-mailadressen of e-mailonderwerpen gevonden in '%(url)s'."
-
-#: ../linkcheck/checker/mailtourl.py:132
-#, python-format
-msgid "Error parsing CGI values: %s"
-msgstr "Fout parsing CGI waarden: %s"
-
-#: ../linkcheck/checker/mailtourl.py:158
-#, python-format
-msgid ""
-"Mail address `%(addr)s' too long. Allowed 256 chars, was %(length)d chars."
-msgstr ""
-"E-mailadres '%(addr)s' te lang. Toegestaan zijn 256 tekens, was %(length)d "
-"tekens."
-
-#: ../linkcheck/checker/mailtourl.py:168
-#, python-format
-msgid "Missing `@' in mail address `%(addr)s'."
-msgstr "Ontbrekende '@' in e-mailadres '%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:177
-#, python-format
-msgid "Missing local part of mail address `%(addr)s'."
-msgstr "Ontbrekend lokaal deel van e-mailadres '%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:184
-#, python-format
-msgid "Missing domain part of mail address `%(addr)s'."
-msgstr "Ontbrekend domeingedeelte van e-mailadres '%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:192
-#, python-format
-msgid ""
-"Local part of mail address `%(addr)s' too long. Allowed 64 chars, was "
-"%(length)d chars."
-msgstr ""
-"Lokaal deel van e-mailadres '%(addr)s' te lang. Toegestaan 64 tekens, was "
-"%(length)d tekens."
-
-#: ../linkcheck/checker/mailtourl.py:203
-#, python-format
-msgid ""
-"Domain part of mail address `%(addr)s' too long. Allowed 255 chars, was "
-"%(length)d chars."
-msgstr ""
-"Domeinonderdeel van e-mailadres '%(addr)s' te lang. Toegestaan 255 tekens, "
-"was %(length)d tekens."
-
-#: ../linkcheck/checker/mailtourl.py:218
-#, python-format
-msgid "Unquoted double quote or backslash in mail address `%(addr)s'."
-msgstr ""
-"Niet-geciteerde dubbele aanhalingstekens of schuine streep in e-mailadres "
-"'%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:227
-#, python-format
-msgid "Local part of mail address `%(addr)s' may not start with a dot."
-msgstr "Lokaal deel van e-mailadres '%(addr)s' mag niet beginnen met een punt."
-
-#: ../linkcheck/checker/mailtourl.py:235
-#, python-format
-msgid "Local part of mail address `%(addr)s' may not end with a dot."
-msgstr "Lokaal deel van e-mailadres '%(addr)s' mag niet eindigen met een punt."
-
-#: ../linkcheck/checker/mailtourl.py:243
-#, python-format
-msgid "Local part of mail address `%(addr)s' may not contain two dots."
-msgstr ""
-"Het lokale deel van het e-mailadres '%(addr)s' mag geen dubbele punten "
-"bevatten."
-
-#: ../linkcheck/checker/mailtourl.py:253
-#, python-format
-msgid ""
-"Local part of mail address `%(addr)s' contains unquoted character `%(char)s."
-msgstr ""
-"Lokaal deel van e-mailadres `%(addr)s' bevat niet-geciteerd teken `%(char)s."
-
-#: ../linkcheck/checker/mailtourl.py:271
-#, python-format
-msgid "Domain part of mail address `%(addr)s' has invalid IP."
-msgstr "Domeinonderdeel van e-mailadres `%(addr)s' heeft ongeldig IP."
-
-#: ../linkcheck/checker/mailtourl.py:281
-#, python-format
-msgid "Invalid domain part of mail address `%(addr)s'."
-msgstr "Ongeldig domeinonderdeel van e-mailadres `%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:289
-#, python-format
-msgid "Invalid top level domain part of mail address `%(addr)s'."
-msgstr "Ongeldig domeindeel op het hoogste niveau van e-mailadres `%(addr)s'."
-
-#: ../linkcheck/checker/mailtourl.py:327
-#, python-format
-msgid "No MX mail host for %(domain)s found."
-msgstr "Er is geen MX-mailhost voor %(domain)s gevonden."
-
-#: ../linkcheck/checker/mailtourl.py:336
-#, python-format
-msgid "No host for %(domain)s found."
-msgstr "Er is geen host voor %(domain)s gevonden."
-
-#: ../linkcheck/checker/mailtourl.py:353
-#, python-format
-msgid "Got invalid DNS answer %(answer)s for %(domain)s."
-msgstr "Ongeldig DNS-antwoord %(answer)s voor %(domain)s."
-
-#: ../linkcheck/checker/mailtourl.py:366
-msgid "Valid mail address syntax"
-msgstr "Geldige syntaxis van het e-mailadres"
-
-#: ../linkcheck/checker/dnsurl.py:46
-#, python-format
-msgid "%(host)s resolved to IPs %(ips)s"
-msgstr "%(host)s opgelost voor IPS %(ips)s"
-
-#: ../linkcheck/checker/dnsurl.py:48
-#, python-format
-msgid "%(host)r could not be resolved"
-msgstr "%(host)r kan niet worden opgelost"
-
-#: ../linkcheck/checker/itmsservicesurl.py:31
-msgid "Missing required url parameter"
-msgstr "Ontbrekende vereiste url-parameter"
-
-#: ../linkcheck/checker/ftpurl.py:75
-msgid "Got no answer from FTP server"
-msgstr "Heb je geen antwoord van FTP-server"
-
-#: ../linkcheck/checker/ftpurl.py:78
-#, python-format
-msgid "Remote host has closed connection: %(msg)s"
-msgstr "Externe host heeft verbinding met %(msg)s verbroken"
-
-#: ../linkcheck/checker/ftpurl.py:124
-msgid "Missing trailing directory slash in ftp url."
-msgstr "Ontbrekende eind schuine streep voor folder in ftp url."
-
-#: ../linkcheck/checker/ftpurl.py:188
-msgid "FTP file size too large"
-msgstr "FTP-bestandsgrootte te groot"
-
-#: ../linkcheck/checker/unknownurl.py:32
-#, python-format
-msgid "%(scheme)s URL ignored."
-msgstr "URL van %(scheme)s genegeerd."
-
-#: ../linkcheck/checker/unknownurl.py:34
-msgid "ignored"
-msgstr "genegeerd"
-
-#: ../linkcheck/checker/unknownurl.py:36
-msgid "URL is unrecognized or has invalid syntax"
-msgstr "URL is niet herkend of heeft ongeldige syntaxis"
-
-#: ../linkcheck/checker/fileurl.py:142
-#, python-format
-msgid "Could not get current working directory: %(msg)s"
-msgstr "Kan de huidige werkmap niet krijgen: %(msg)s"
-
-#: ../linkcheck/checker/fileurl.py:175 ../linkcheck/checker/fileurl.py:339
-msgid "Added trailing slash to directory."
-msgstr "Schuine streep toegevoegd aan de map."
-
-#: ../linkcheck/checker/fileurl.py:198 ../linkcheck/checker/fileurl.py:352
-msgid ""
-"local files are only checked without parent URL or when the parent URL is "
-"also a file"
-msgstr ""
-"lokale bestanden worden alleen gecontroleerd zonder bovenliggende URL of "
-"wanneer de bovenliggende URL ook een bestand is"
-
-#: ../linkcheck/checker/fileurl.py:203 ../linkcheck/checker/fileurl.py:367
-msgid "directory"
-msgstr "folder"
-
-#: ../linkcheck/checker/fileurl.py:222
-#, python-format
-msgid ""
-"The URL path %(path)r is not the same as the system path %(realpath)r. You "
-"should always use the system path in URLs."
-msgstr ""
-"Het URL-pad %(path)r is niet hetzelfde als het systeempad %(realpath)r. U "
-"moet het systeempad altijd gebruiken in URL's."
-
-#: ../linkcheck/checker/fileurl.py:360
-#, python-format
-msgid ""
-"URL `%s' is a directory with an anchor. When checking local files "
-"AnchorCheck does not support anchors for directories."
-msgstr ""
-"URL `%s' is een directory met een anker. Bij het controleren van lokale "
-"bestanden ondersteunt AnchorCheck geen ankers voor mappen."
-
-#: ../linkcheck/checker/httpurl.py:138
-msgid "Access denied by robots.txt, checked only syntax."
-msgstr "Toegang geweigerd door robots.txt, alleen syntaxis gecontroleerd."
-
-#: ../linkcheck/checker/httpurl.py:139
-msgid "syntax OK"
-msgstr "syntaxis OK"
-
-#: ../linkcheck/checker/httpurl.py:283
-#, fuzzy, python-format
-msgid "Redirected to `%(url)s' status: %(code)d %(reason)s."
-msgstr "Doorgestuurd naar `%(url)s'."
-
-#: ../linkcheck/checker/httpurl.py:336
-msgid "OK"
-msgstr "OK"
-
-#: ../linkcheck/checker/httpurl.py:348 ../linkcheck/checker/urlbase.py:776
-msgid "File size too large"
-msgstr "Bestand te groot"
-
-#: ../linkcheck/checker/urlbase.py:79
-#, python-format
-msgid "URL has unparsable domain name: %(name)s"
-msgstr "URL heeft unparsable domeinnaam: %(name)s"
-
-#: ../linkcheck/checker/urlbase.py:163
-msgid "The URL is outside of the domain filter, checked only syntax."
-msgstr ""
-"De URL bevindt zich buiten het domeinfilter. Alleen de syntaxis "
-"gecontroleerd."
-
-#: ../linkcheck/checker/urlbase.py:166
-msgid "filtered"
-msgstr "gefilterd"
-
-#: ../linkcheck/checker/urlbase.py:216
-#, python-format
-msgid "Leading or trailing whitespace in URL `%(url)s'."
-msgstr "Whitespace leiden of achtervolgen in URL `%(url)s'."
-
-#: ../linkcheck/checker/urlbase.py:340
-#, python-format
-msgid "The URL with content type %r is not parseable."
-msgstr "De URL met inhoudstype %r is niet te parseren."
-
-#: ../linkcheck/checker/urlbase.py:421
-msgid "URL is empty"
-msgstr "URL is leeg"
-
-#: ../linkcheck/checker/urlbase.py:436
-#, python-format
-msgid "Effective URL %(url)r."
-msgstr "Effectieve URL %(url)r."
-
-#: ../linkcheck/checker/urlbase.py:443
-#, python-format
-msgid "URL length %(len)d is longer than %(max)d."
-msgstr "URL-lengte %(len)d is langer dan %(max)d."
-
-#: ../linkcheck/checker/urlbase.py:493 ../linkcheck/checker/urlbase.py:499
-#, python-format
-msgid "URL host %(host)r has invalid port"
-msgstr "URL-host %(host)r heeft ongeldige poort"
-
-#: ../linkcheck/checker/urlbase.py:506
-msgid "URL has empty hostname"
-msgstr "URL heeft lege hostnaam"
-
-#: ../linkcheck/checker/urlbase.py:531
-#, python-format
-msgid "URL %(url)s has obfuscated IP address %(ip)s"
-msgstr "URL %(url)s heeft verborgen IP-adres %(ip)s"
-
-#: ../linkcheck/checker/urlbase.py:567
-msgid "Hostname not found"
-msgstr "Hostname niet gevonden"
-
-#: ../linkcheck/checker/urlbase.py:570
-#, python-format
-msgid "Bad hostname %(host)r: %(msg)s"
-msgstr "Bad hostnaam %(host)r: %(msg)s"
-
-#: ../linkcheck/checker/urlbase.py:590
-#, python-format
-msgid "could not get content: %(msg)s"
-msgstr "kon geen content krijgen: %(msg)s"
-
-#: ../linkcheck/checker/urlbase.py:645
-#, python-format
-msgid "Content size %(size)s is larger than %(maxbytes)s."
-msgstr "De content grootte %(size)s is groter dan %(maxbytes)s."
-
-#: ../linkcheck/checker/urlbase.py:739
-msgid "Content size is zero."
-msgstr "De content grootte is nul."
-
-#: ../linkcheck/checker/urlbase.py:857
-#, python-format
-msgid "URL has unparsable domain name: %(domain)s"
-msgstr "URL heeft unparsable domeinnaam: %(domain)s"
-
-#: ../linkcheck/cmdline.py:61
-#, python-format
-msgid "Error: %(msg)s"
-msgstr "Fout: %(msg)s"
-
-#: ../linkcheck/cmdline.py:63
-#, python-format
-msgid "Execute '%(program)s -h' for help"
-msgstr "Voer '%(program)s -h' uit voor hulp"
-
-#: ../linkcheck/configuration/__init__.py:226
-#, python-format
-msgid "Configuration file %r does not exist."
-msgstr "Configuratiebestand %r bestaat niet."
-
-#: ../linkcheck/configuration/__init__.py:228
-#, python-format
-msgid "Configuration file %r is not readable."
-msgstr "Configuratiebestand %r is niet leesbaar."
-
-#: ../linkcheck/configuration/__init__.py:238
-msgid "missing user or URL pattern in authentication data."
-msgstr "ontbrekende gebruiker of URL-patroon in verificatiegegevens."
-
-#: ../linkcheck/configuration/__init__.py:273
-msgid "activating text logger output."
-msgstr "activatie van tekstlogger output."
-
-#: ../linkcheck/configuration/__init__.py:284
-msgid "no user/password authentication data found for login URL."
-msgstr ""
-"geen gebruikers-/wachtwoordverificatiegegevens gevonden voor login-URL."
-
-#: ../linkcheck/configuration/__init__.py:288
-msgid "login URL is not a HTTP URL."
-msgstr "login URL is geen HTTP URL."
-
-#: ../linkcheck/configuration/__init__.py:292
-msgid "login URL is incomplete."
-msgstr "login URL is onvolledig."
-
-#: ../linkcheck/configuration/__init__.py:295
-#, python-format
-msgid "disabling login URL %(url)s."
-msgstr "uitschakelen van login URL %(url)s."
-
-#: ../linkcheck/configuration/__init__.py:348
-#, python-format
-msgid "could not create plugin directory %(dirname)r: %(errmsg)r"
-msgstr "kan geen plugin directory %(dirname)r aanmaken: %(errmsg)r"
-
-#: ../linkcheck/configuration/__init__.py:396
-#, python-format
-msgid ""
-"could not copy initial configuration file %(src)r to %(dst)r: %(errmsg)r"
-msgstr ""
-"kon het oorspronkelijke configuratiebestand %(src)r niet kopiëren naar "
-"%(dst)r: %(errmsg)r"
-
-#: ../linkcheck/configuration/confparse.py:62
-#, fuzzy, python-format
-msgid "configuration files %s contain no sections."
-msgstr "Configuratiebestand %r bestaat niet."
-
-#: ../linkcheck/configuration/confparse.py:75
-#, python-format
-msgid "Error parsing configuration: %s"
-msgstr "Fout parsing configuratie: %s"
-
-#: ../linkcheck/configuration/confparse.py:83
-#, python-format
-msgid "invalid empty value for %s: %s\n"
-msgstr "ongeldige lege waarde voor %s: %s\n"
-
-#: ../linkcheck/configuration/confparse.py:103
-#: ../linkcheck/configuration/confparse.py:121
-#, python-format
-msgid "invalid value for %s: %d must not be greater than %d"
-msgstr "ongeldige waarde voor %s: %d mag niet groter zijn dan %d"
-
-#: ../linkcheck/configuration/confparse.py:136
-msgid ""
-"The blacklist section in linkcheckerrc is deprecated, please rename to "
-"failures"
-msgstr ""
-"De blacklist sectie in linkcheckeerrc is afgeschaft. Hernoem naar failures"
-
-#: ../linkcheck/configuration/confparse.py:237
-#, python-format
-msgid "missing auth part in entry %(val)r"
-msgstr "ontbrekend auth-gedeelte in de vermelding %(val)r"
-
-#: ../linkcheck/configuration/confparse.py:247
-#, python-format
-msgid "invalid login URL `%s'. Only HTTP and HTTPS URLs are supported."
-msgstr ""
-"ongeldige login URL `%s’. Alleen HTTP- en HTTPS-URL's worden ondersteund."
-
-#: ../linkcheck/configuration/confparse.py:276
-#, python-format
-msgid ""
-"The configuration file %s contains password information (in section [%s] and "
-"options %s) and the file is readable by others. Please make the file only "
-"readable by you."
-msgstr ""
-"Het configuratiebestand bevat %s wachtwoordinformatie (in sectie [%s] en "
-"opties %s) en het bestand is leesbaar voor anderen. Maak het bestand alleen "
-"leesbaar voor u."
-
-#: ../linkcheck/configuration/confparse.py:285
-#, python-format
-msgid "For example execute 'chmod go-rw %s'."
-msgstr "Voer bijvoorbeeld 'chmod go-rw %s' uit."
-
-#: ../linkcheck/configuration/confparse.py:290
-#, python-format
-msgid "See %(url)s for more info on setting file permissions."
-msgstr ""
-"Zie %(url)s voor meer informatie over het instellen van bestandsmachtigingen."
-
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:299
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:300
 msgid "usage: "
 msgstr "gebruik: "
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:777
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:726
+#, python-format
+msgid " (default: %(default)s)"
+msgstr ""
+
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:780
 #, python-format
 msgid "argument %(argument_name)s: %(message)s"
 msgstr ""
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:883
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:886
 msgid ".__call__() not defined"
 msgstr ".__call__() niet gedefinieerd"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1214
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1157
+msgid "show program's version number and exit"
+msgstr ""
+
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1219
 #, fuzzy, python-format
 msgid "conflicting subparser: %s"
 msgstr "conflicterende optietekenreeks: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1218
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1223
 #, fuzzy, python-format
 msgid "conflicting subparser alias: %s"
 msgstr "conflicterende optietekenreeks: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1253
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1258
 #, python-format
 msgid "unknown parser %(parser_name)r (choices: %(choices)s)"
 msgstr "onbekende parser %(parser_name)r (keuzes: %(choices)s)"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1313
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1318
 #, python-format
 msgid "argument \"-\" with mode %r"
 msgstr "argument \"-\" met modus %r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1322
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1327
 #, python-format
 msgid "can't open '%(filename)s': %(error)s"
 msgstr "kan ‘%(filename)s niet openen': %(error)s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1531
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1536
 #, python-format
 msgid "cannot merge actions - two groups are named %r"
 msgstr "kan geen acties samenvoegen - twee groepen worden %r genoemd"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1569
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1574
 msgid "'required' is an invalid argument for positionals"
 msgstr "'vereist' is een ongeldig argument voor positionals"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1591
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1596
 #, python-format
 msgid ""
 "invalid option string %(option)r: must start with a character "
@@ -1885,116 +1899,116 @@ msgstr ""
 "ongeldige optietekenreeks %(option)r: moet beginnen met een teken "
 "%(prefix_chars)r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1609
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1614
 #, python-format
 msgid "dest= is required for options like %r"
 msgstr "dest= is vereist voor opties zoals %r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1626
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1631
 #, python-format
 msgid "invalid conflict_resolution value: %r"
 msgstr "ongeldige conflict_resolution waarde: %r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1644
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1649
 #, python-format
 msgid "conflicting option string: %s"
 msgid_plural "conflicting option strings: %s"
 msgstr[0] "conflicterende optietekenreeks: %s"
 msgstr[1] "conflicterende optietekenreeksen: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1718
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1723
 msgid "mutually exclusive arguments must be optional"
 msgstr "wederzijds exclusieve argumenten moeten facultatief zijn"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1794
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1799
 msgid "positional arguments"
 msgstr "positionele argumenten"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1795
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1800
 #, fuzzy
 msgid "options"
 msgstr "Uitvoeropties"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1810
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1815
 msgid "show this help message and exit"
 msgstr "dit helpbericht weergeven en afsluiten"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1841
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1846
 msgid "cannot have multiple subparser arguments"
 msgstr "kan niet meerdere subparserargumenten hebben"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1893
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2408
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:1898
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2421
 #, python-format
 msgid "unrecognized arguments: %s"
 msgstr "niet-herkende argumenten: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:1993
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2001
 #, python-format
 msgid "not allowed with argument %s"
 msgstr "niet toegestaan met argument %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2043
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2057
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2043
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2074
 #, python-format
 msgid "ignored explicit argument %r"
 msgstr "genegeerd expliciet argument %r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2164
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2181
 #, python-format
 msgid "the following arguments are required: %s"
 msgstr "de volgende argumenten zijn vereist: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2179
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2196
 #, python-format
 msgid "one of the arguments %s is required"
 msgstr "een van de argumenten %s is vereist"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2223
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2240
 msgid "expected one argument"
 msgstr "verwacht een argument"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2224
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2241
 msgid "expected at most one argument"
 msgstr "verwacht hoogstens één argument"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2225
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2242
 msgid "expected at least one argument"
 msgstr "verwacht ten minste één argument"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2229
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2246
 #, python-format
 msgid "expected %s argument"
 msgid_plural "expected %s arguments"
 msgstr[0] "verwacht %s argument"
 msgstr[1] "verwachte %s argumenten"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2287
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2303
 #, python-format
 msgid "ambiguous option: %(option)s could match %(matches)s"
 msgstr "dubbelzinnige optie: %(option)s kan overeenkomen met %(matches)s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2351
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2364
 #, python-format
 msgid "unexpected option string: %s"
 msgstr "onverwachte optiereeks: %s"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2550
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2566
 #, python-format
 msgid "%r is not callable"
 msgstr "%r is niet oproepbaar"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2566
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2582
 #, python-format
 msgid "invalid %(type)s value: %(value)r"
 msgstr "ongeldige %(type)s waarde: %(value)r"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2577
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2593
 #, python-format
 msgid "invalid choice: %(value)r (choose from %(choices)s)"
 msgstr "ongeldige keuze: %(value)r (kies uit %(choices)s)"
 
-#: /opt/hostedtoolcache/Python/3.12.0/x64/lib/python3.12/argparse.py:2655
+#: /opt/hostedtoolcache/Python/3.12.5/x64/lib/python3.12/argparse.py:2671
 #, python-format
 msgid "%(prog)s: error: %(message)s\n"
 msgstr "%(prog)s: fout: %(message)s\n"
