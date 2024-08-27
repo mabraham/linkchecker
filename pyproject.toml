@@ -91,6 +91,7 @@ version_scheme = "post-release"
 
 [tool.hatch.envs.test]
 dependencies = [
+    "cryptography",
     "parameterized",
     "pdfminer.six",
     "pyftpdlib",
