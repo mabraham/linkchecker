@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "LINKCHECKERRC" "5" "February 11, 2024" "10.4.0.post11+g62f9694a0" "LinkChecker"
+.TH "LINKCHECKERRC" "5" "August 27, 2024" "10.4.0.post49+g7cf5037e" "LinkChecker"
 .SH NAME
 linkcheckerrc \- configuration file for LinkChecker
 .SH DESCRIPTION
@@ -43,11 +43,11 @@ or else \fB~/.config/linkchecker/linkcheckerrc\fP on Unix,
 .TP
 \fBcookiefile=\fP\fIfilename\fP
 Read a file with initial cookie data. The cookie data format is
-explained in \fBlinkchecker(1)\fP\&.
+explained in \fB\fI\%linkchecker(1)\fP\fP\&.
 Command line option: \fI\%\-\-cookiefile\fP
 .TP
 \fBdebugmemory=\fP[\fB0\fP|\fB1\fP]
-Write memory allocation statistics to a file on exit, requires \fI\%meliae\fP\&.
+Write memory allocation statistics to a file on exit, requires \X'tty: link https://pypi.org/project/meliae/'\fI\%meliae\fP\X'tty: link'\&.
 The default is not to write the file.
 Command line option: none
 .TP
@@ -123,7 +123,7 @@ Limit the maximum number of HTTP requests per second to one host.
 The average number of requests per second is approximately one third of the
 maximum. Values less than 1 and at least 0.001 can be used.
 To use values greater than 10, the HTTP server must return a
-\(dqLinkChecker\(dq response header.
+\fBLinkChecker\fP response header.
 The default is 10.
 Command line option: none
 .TP
@@ -254,7 +254,7 @@ Specify the console output type as \fBtext\fP, \fBhtml\fP, \fBsql\fP, \fBcsv\fP,
 is \fBtext\fP\&. The various output types are documented below.
 The \fIENCODING\fP specifies the output encoding, the default is that of
 your locale. Valid encodings are listed at
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 Command line option: \fI\%\-\-output\fP
 .TP
 \fBverbose=\fP[\fB0\fP|\fB1\fP]
@@ -330,7 +330,7 @@ Command line option: none
 .TP
 \fBencoding=\fP\fISTRING\fP
 Valid encodings are listed in
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 Default encoding is the system default locale encoding.
 .TP
 \fBwraplength=\fP\fINUMBER\fP
@@ -424,7 +424,7 @@ Set CSV quote character. Default is a double quote (\fB\(dq\fP).
 .TP
 \fBdialect=\fP\fISTRING\fP
 Controls the output formatting.
-See \fI\%https://docs.python.org/3/library/csv.html#csv.Dialect\fP\&.
+See \X'tty: link https://docs.python.org/3/library/csv.html#csv.Dialect'\fI\%https://docs.python.org/3/library/csv.html#csv.Dialect\fP\X'tty: link'\&.
 Default is \fBexcel\fP\&.
 .UNINDENT
 .SS sql
@@ -656,8 +656,10 @@ Configures the expiration warning time in days.
 .UNINDENT
 .SS HtmlSyntaxCheck
 .sp
-Check the syntax of HTML pages with the online W3C HTML validator. See
-\fI\%https://validator.w3.org/docs/api.html\fP\&.
+Check the syntax of HTML pages by submitting their URLs to the online W3C HTML
+validator. If a page URL is not accessible to the validator no check is
+performed and no warning given.
+See \X'tty: link https://validator.w3.org/docs/api.html'\fI\%https://validator.w3.org/docs/api.html\fP\X'tty: link'\&.
 .sp
 \fBNOTE:\fP
 .INDENT 0.0
@@ -676,8 +678,10 @@ HTTP headers that start with \(dqX\-\(dq.
 .UNINDENT
 .SS CssSyntaxCheck
 .sp
-Check the syntax of HTML pages with the online W3C CSS validator. See
-\fI\%https://jigsaw.w3.org/css\-validator/manual.html#expert\fP\&.
+Check the syntax of CSS stylesheets by submitting their URLs to the online W3C CSS
+validator. If a stylesheet URL is not accessible to the validator no check is
+performed and no warning given.
+See \X'tty: link https://jigsaw.w3.org/css-validator/manual.html#expert'\fI\%https://jigsaw.w3.org/css\-validator/manual.html#expert\fP\X'tty: link'\&.
 .SS VirusCheck
 .sp
 Checks the page content for virus infections with clamav. A local clamav
@@ -689,11 +693,11 @@ Filename of \fBclamd.conf\fP config file.
 .UNINDENT
 .SS PdfParser
 .sp
-Parse PDF files for URLs to check. Needs the \fI\%pdfminer.six\fP Python package
+Parse PDF files for URLs to check. Needs the \X'tty: link https://pypi.org/project/pdfminer.six/'\fI\%pdfminer.six\fP\X'tty: link' Python package
 installed.
 .SS WordParser
 .sp
-Parse Word files for URLs to check. Needs the \fI\%pywin32\fP Python
+Parse Word files for URLs to check. Needs the \X'tty: link https://pypi.org/project/pywin32/'\fI\%pywin32\fP\X'tty: link' Python
 extension installed.
 .SS MarkdownCheck
 .sp
@@ -705,8 +709,8 @@ Regular expression matching the names of Markdown files.
 .UNINDENT
 .SH WARNINGS
 .sp
-The following warnings are recognized in the \(aqignorewarnings\(aq and
-\(aqignorewarningsforurls\(aq config file entries:
+The following warnings are recognized by \fBignorewarnings\fP and
+\fBignorewarningsforurls\fP:
 .INDENT 0.0
 .TP
 \fBfile\-anchorcheck\-directory\fP
@@ -759,7 +763,7 @@ The URL contains leading or trailing whitespace.
 .UNINDENT
 .SH SEE ALSO
 .sp
-\fBlinkchecker(1)\fP
+\fB\fI\%linkchecker(1)\fP\fP
 .SH AUTHOR
 Bastian Kleineidam <bastian.kleineidam@web.de>
 .SH COPYRIGHT

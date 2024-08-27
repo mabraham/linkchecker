@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "LINKCHECKER" "1" "February 11, 2024" "10.4.0.post11+g62f9694a0" "LinkChecker"
+.TH "LINKCHECKER" "1" "August 27, 2024" "10.4.0.post49+g7cf5037e" "LinkChecker"
 .SH NAME
 linkchecker \- command line client to check HTML documents and websites for broken links
 .SH SYNOPSIS
@@ -190,7 +190,7 @@ $XDG_DATA_HOME/linkchecker/failures for the failures output type, or
 FILENAME if specified. The ENCODING specifies the output
 encoding, the default is that of your locale. Valid encodings are
 listed at
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 The FILENAME and ENCODING parts of the none output type will
 be ignored, else if the file already exists, it will be overwritten.
 You can specify this option more than once. Valid file output TYPEs
@@ -212,7 +212,7 @@ gml, dot, xml, sitemap, none or failures.
 Default type is text. The various output types are documented below.
 The ENCODING specifies the output encoding, the default is that of
 your locale. Valid encodings are listed at
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 .UNINDENT
 .INDENT 0.0
 .TP
@@ -325,7 +325,7 @@ A file can be a simple list of URLs, one per line, if the first line is
 .sp
 Configuration files can specify all options above. They can also specify
 some options that cannot be set on the command line. See
-\fBlinkcheckerrc(5)\fP for more info.
+\fB\fI\%linkcheckerrc(5)\fP\fP for more info.
 .SH OUTPUT TYPES
 .sp
 Note that by default only errors and warnings are logged. You should use
@@ -360,7 +360,7 @@ Log check result as machine\-readable XML.
 .TP
 \fBsitemap\fP
 Log check result as an XML sitemap whose protocol is documented at
-\fI\%https://www.sitemaps.org/protocol.html\fP\&.
+\X'tty: link https://www.sitemaps.org/protocol.html'\fI\%https://www.sitemaps.org/protocol.html\fP\X'tty: link'\&.
 .TP
 \fBsql\fP
 Log check result as SQL script with INSERT commands. An example
@@ -377,7 +377,7 @@ Logs nothing. Suitable for debugging or checking the exit code.
 .SH REGULAR EXPRESSIONS
 .sp
 LinkChecker accepts Python regular expressions. See
-\fI\%https://docs.python.org/howto/regex.html\fP for an introduction.
+\X'tty: link https://docs.python.org/howto/regex.html'\fI\%https://docs.python.org/howto/regex.html\fP\X'tty: link' for an introduction.
 An addition is that a leading exclamation mark negates the regular
 expression.
 .SH COOKIE FILES
@@ -535,7 +535,7 @@ will be made.
 .sp
 The complete list of recognized, but unsupported links can be found
 in the
-\fI\%linkcheck/checker/unknownurl.py\fP
+\X'tty: link https://github.com/linkchecker/linkchecker/blob/master/linkcheck/checker/unknownurl.py'\fI\%linkcheck/checker/unknownurl.py\fP\X'tty: link'
 source file. The most prominent of them should be JavaScript links.
 .UNINDENT
 .SH SITEMAPS
@@ -553,7 +553,7 @@ plugins are run if the URL type has content (mailto: URLs have no
 content for example) and if the check is not forbidden (ie. by HTTP
 robots.txt).
 Use the option \fI\%\-\-list\-plugins\fP for a list of plugins and their
-documentation. All plugins are enabled via the \fBlinkcheckerrc(5)\fP
+documentation. All plugins are enabled via the \fB\fI\%linkcheckerrc(5)\fP\fP
 configuration file.
 .SH RECURSION
 .sp
@@ -657,12 +657,12 @@ This might slow down the program or even the whole system.
 \fBlinkchecker\-out.\fP\fITYPE\fP \- default logger file output name
 .SH SEE ALSO
 .sp
-\fBlinkcheckerrc(5)\fP
+\fB\fI\%linkcheckerrc(5)\fP\fP
 .sp
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP \- valid
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link' \- valid
 output encodings
 .sp
-\fI\%https://docs.python.org/howto/regex.html\fP \- regular expression
+\X'tty: link https://docs.python.org/howto/regex.html'\fI\%https://docs.python.org/howto/regex.html\fP\X'tty: link' \- regular expression
 documentation
 .SH AUTHOR
 Bastian Kleineidam <bastian.kleineidam@web.de>

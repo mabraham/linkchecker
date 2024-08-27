@@ -27,7 +27,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.TH "LINKCHECKER" "1" "Februar 03, 2024" "10.4.0.post11+g62f9694a0" "LinkChecker"
+.TH "LINKCHECKER" "1" "August 27, 2024" "10.4.0.post49+g7cf5037e" "LinkChecker"
 .SH NAME
 linkchecker \- Kommandozeilenprogramm zum Prüfen von HTML Dokumenten und Webseiten auf ungültige Verknüpfungen
 .SH SYNTAX
@@ -185,7 +185,7 @@ $XDG_DATA_HOME/linkchecker/failures for the failures output type, or
 FILENAME if specified. The ENCODING specifies the output
 encoding, the default is that of your locale. Valid encodings are
 listed at
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 The FILENAME and ENCODING parts of the none output type will
 be ignored, else if the file already exists, it will be overwritten.
 You can specify this option more than once. Valid file output TYPEs
@@ -207,7 +207,7 @@ gml, dot, xml, sitemap, none or failures.
 Default type is text. The various output types are documented below.
 The ENCODING specifies the output encoding, the default is that of
 your locale. Valid encodings are listed at
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\&.
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link'\&.
 .UNINDENT
 .INDENT 0.0
 .TP
@@ -307,7 +307,7 @@ A file can be a simple list of URLs, one per line, if the first line is
 .UNINDENT
 .SH KONFIGURATIONSDATEIEN
 .sp
-Konfigurationsdateien können alle obigen Optionen enthalten. Sie können zudem Optionen enthalten, welche nicht auf der Kommandozeile gesetzt werden können. Siehe \fBlinkcheckerrc(5)\fP für mehr Informationen.
+Konfigurationsdateien können alle obigen Optionen enthalten. Sie können zudem Optionen enthalten, welche nicht auf der Kommandozeile gesetzt werden können. Siehe \fB\fI\%linkcheckerrc(5)\fP\fP für mehr Informationen.
 .SH AUSGABETYPEN
 .sp
 Beachten Sie, dass standardmäßig nur Fehler und Warnungen protokolliert werden. Sie sollten die \fI\%\-\-verbose\fP Option benutzen, um eine komplette URL Liste zu erhalten, besonders bei Ausgabe eines Sitemap\-Graphen.
@@ -335,7 +335,7 @@ Gebe Prüfresultat als GraphXML\-Datei aus.
 Gebe Prüfresultat als maschinenlesbare XML\-Datei aus.
 .TP
 \fBsitemap\fP
-Protokolliere Prüfergebnisse als XML Sitemap dessen Format unter \fI\%https://www.sitemaps.org/protocol.html\fP dokumentiert ist.
+Protokolliere Prüfergebnisse als XML Sitemap dessen Format unter \X'tty: link https://www.sitemaps.org/protocol.html'\fI\%https://www.sitemaps.org/protocol.html\fP\X'tty: link' dokumentiert ist.
 .TP
 \fBsql\fP
 Gebe Prüfresultat als SQL Skript mit INSERT Befehlen aus. Ein Beispielskript, um die initiale SQL Tabelle zu erstellen ist unter create.sql zu finden.
@@ -350,7 +350,7 @@ Gibt nichts aus. Für Debugging oder Prüfen des Rückgabewerts geeignet.
 .UNINDENT
 .SH REGULÄRE AUSDRÜCKE
 .sp
-LinkChecker akzeptiert Pythons reguläre Ausdrücke. Siehe \fI\%https://docs.python.org/howto/regex.html\fP für eine Einführung. Eine Ergänzung ist, dass ein regulärer Ausdruck negiert wird falls er mit einem Ausrufezeichen beginnt.
+LinkChecker akzeptiert Pythons reguläre Ausdrücke. Siehe \X'tty: link https://docs.python.org/howto/regex.html'\fI\%https://docs.python.org/howto/regex.html\fP\X'tty: link' für eine Einführung. Eine Ergänzung ist, dass ein regulärer Ausdruck negiert wird falls er mit einem Ausrufezeichen beginnt.
 .SH COOKIE-DATEIEN
 .sp
 Eine Cookie\-Datei enthält Standard HTTP\-Header (RFC 2616) mit den folgenden möglichen Namen:
@@ -456,7 +456,7 @@ Eine reguläre, lesbare Datei die geöffnet werden kann ist gültig. Ein lesbare
 HTML\- oder andere untersuchbare Dateiinhalte werden rekursiv geprüft.
 .TP
 Mail\-Links (\fBmailto:\fP)
-Ein \fI\%mailto:\-Link\fP ergibt eine Liste von E\-Mail\-Adressen. Falls eine Adresse fehlerhaft ist, wird die ganze Liste als fehlerhaft angesehen. Für jede E\-Mail\-Adresse werden die folgenden Dinge geprüft:
+Ein \X'tty: link mailto:-Link'\fI\%mailto:\-Link\fP\X'tty: link' ergibt eine Liste von E\-Mail\-Adressen. Falls eine Adresse fehlerhaft ist, wird die ganze Liste als fehlerhaft angesehen. Für jede E\-Mail\-Adresse werden die folgenden Dinge geprüft:
 .INDENT 7.0
 .IP 1. 3
 Check the address syntax, both the parts before and after the
@@ -489,7 +489,7 @@ Liste die Dateien im Verzeichnis auf mit dem NLST\-Befehl
 Nicht unterstützte Links (\fBjavascript:\fP, etc.)
 Ein nicht unterstützter Link wird nur eine Warnung ausgeben. Weitere Prüfungen werden nicht durchgeführt.
 .sp
-Die komplette Liste von erkannten, aber nicht unterstützten Links ist in der Quelldatei \fI\%linkcheck/checker/unknownurl.py\fP\&. Die bekanntesten davon dürften JavaScript\-Links sein.
+Die komplette Liste von erkannten, aber nicht unterstützten Links ist in der Quelldatei \X'tty: link https://github.com/linkchecker/linkchecker/blob/master/linkcheck/checker/unknownurl.py'\fI\%linkcheck/checker/unknownurl.py\fP\X'tty: link'\&. Die bekanntesten davon dürften JavaScript\-Links sein.
 .UNINDENT
 .SH SITEMAPS
 .sp
@@ -506,7 +506,7 @@ plugins are run if the URL type has content (mailto: URLs have no
 content for example) and if the check is not forbidden (ie. by HTTP
 robots.txt).
 Use the option \fI\%\-\-list\-plugins\fP for a list of plugins and their
-documentation. All plugins are enabled via the \fBlinkcheckerrc(5)\fP
+documentation. All plugins are enabled via the \fB\fI\%linkcheckerrc(5)\fP\fP
 configuration file.
 .SH REKURSION
 .sp
@@ -591,11 +591,11 @@ LinkChecker benutzt Hauptspeicher für jede zu prüfende URL, die in der Wartesc
 \fBlinkchecker\-out.\fP\fITYP\fP \- Standard Dateiname der Logausgabe
 .SH SIEHE AUCH
 .sp
-\fBlinkcheckerrc(5)\fP
+\fB\fI\%linkcheckerrc(5)\fP\fP
 .sp
-\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP \- gültige Ausgabe Enkodierungen
+\X'tty: link https://docs.python.org/library/codecs.html#standard-encodings'\fI\%https://docs.python.org/library/codecs.html#standard\-encodings\fP\X'tty: link' \- gültige Ausgabe Enkodierungen
 .sp
-\fI\%https://docs.python.org/howto/regex.html\fP \- Dokumentation zu regulären Ausdrücken
+\X'tty: link https://docs.python.org/howto/regex.html'\fI\%https://docs.python.org/howto/regex.html\fP\X'tty: link' \- Dokumentation zu regulären Ausdrücken
 .SH AUTHOR
 Bastian Kleineidam <bastian.kleineidam@web.de>
 .SH COPYRIGHT
