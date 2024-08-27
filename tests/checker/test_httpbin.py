@@ -16,15 +16,14 @@
 """
 Test http stuff with httpbin.org.
 """
-import os
 import re
-from tests import need_network
+from tests import need_network, running_in_ci
 from . import LinkCheckTest
 
 
 def get_httpbin_url(path):
     """Get httpbin URL."""
-    if "CI" in os.environ:
+    if running_in_ci():
         host = "localhost:8080"
     else:
         host = "httpbin.org"

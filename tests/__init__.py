@@ -38,6 +38,11 @@ class TestBase(unittest.TestCase):
         init_i18n()
 
 
+@lru_cache(1)
+def running_in_ci():
+    return "CI" in os.environ
+
+
 def run(cmd, verbosity=0, **kwargs):
     """Run command without error checking.
     @return: command return code"""
