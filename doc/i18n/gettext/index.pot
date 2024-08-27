@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2000-2016 Bastian Kleineidam, 2010-2023 LinkChecker Authors
+# Copyright (C) 2000-2016 Bastian Kleineidam, 2010-2024 LinkChecker Authors
 # This file is distributed under the same license as the LinkChecker package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LinkChecker 10.3.0.post33+g268799ee0\n"
+"Project-Id-Version: LinkChecker 10.4.0.post49+g7cf5037e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 19:24+0000\n"
+"POT-Creation-Date: 2024-08-27 18:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
