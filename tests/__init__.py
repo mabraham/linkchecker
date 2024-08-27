@@ -43,6 +43,13 @@ def running_in_ci():
     return "CI" in os.environ
 
 
+def skip(reason, strict=True):
+    if strict and running_in_ci():
+        pytest.fail(reason)
+    else:
+        pytest.skip(reason)
+
+
 def run(cmd, verbosity=0, **kwargs):
     """Run command without error checking.
     @return: command return code"""
@@ -70,14 +77,14 @@ def run_silent(cmd):
         null.close()
 
 
-def _need_func(testfunc, name):
+def _need_func(testfunc, name, strict=True):
     """Decorator skipping test if given testfunc fails."""
 
     def check_func(func):
         @wraps(func)
         def newfunc(*args, **kwargs):
             if not testfunc():
-                pytest.skip("%s is not available" % name)
+                skip("%s is not available" % name, strict)
             return func(*args, **kwargs)
 
         return newfunc
@@ -116,7 +123,7 @@ def has_posix():
     return os.name == "posix"
 
 
-need_posix = _need_func(has_posix, "POSIX system")
+need_posix = _need_func(has_posix, "POSIX system", False)
 
 
 @lru_cache(1)
@@ -125,7 +132,7 @@ def has_windows():
     return os.name == "nt"
 
 
-need_windows = _need_func(has_windows, "Windows system")
+need_windows = _need_func(has_windows, "Windows system", False)
 
 
 @lru_cache(1)
@@ -134,7 +141,7 @@ def has_linux():
     return sys.platform.startswith("linux")
 
 
-need_linux = _need_func(has_linux, "Linux system")
+need_linux = _need_func(has_linux, "Linux system", False)
 
 
 @lru_cache(1)
@@ -212,7 +219,7 @@ def has_word():
     return parseword.has_word()
 
 
-need_word = _need_func(has_word, "Word")
+need_word = _need_func(has_word, "Word", False)
 
 
 @lru_cache(1)
