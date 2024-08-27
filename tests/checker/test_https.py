@@ -87,7 +87,7 @@ class TestHttps(HttpsServerTest):
             "real url %s" % url,
             "valid",
         ]
-        confargs = dict(sslverify=False)
+        confargs = dict(sslverify=get_file("https_cert.pem"))
         with patch.dict("os.environ",
                         {"REQUESTS_CA_BUNDLE": get_file("https_cert.pem")}):
             self.direct(url, resultlines, recursionlevel=0, confargs=confargs)
