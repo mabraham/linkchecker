@@ -45,7 +45,7 @@ def get_mtime(filename):
     """Return modification time of filename or zero on errors."""
     try:
         return os.path.getmtime(filename)
-    except os.error:
+    except OSError:
         return 0
 
 
@@ -53,7 +53,7 @@ def get_size(filename):
     """Return file size in Bytes, or -1 on error."""
     try:
         return os.path.getsize(filename)
-    except os.error:
+    except OSError:
         return -1
 
 
