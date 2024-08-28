@@ -43,7 +43,7 @@ jobs:
       - name: Attest
         uses: actions/attest-build-provenance@v1
         with:
-          subject-path: 'dist/*.{tar.gz,whl}'
+          subject-path: 'dist/*.tar.gz, dist/*.whl'
 
       - name: Check distribution files
         run: >
