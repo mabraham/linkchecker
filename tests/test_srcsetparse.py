@@ -17,10 +17,9 @@
 Test srcset attribute parsing.
 """
 
-import unittest
 from linkcheck.htmlutil.srcsetparse import parse_srcset
 
-from parameterized import parameterized
+import pytest
 
 
 # list of tuples
@@ -45,7 +44,7 @@ parsetests = [
 ]
 
 
-class TestSrcsetParsing(unittest.TestCase):
-    @parameterized.expand(parsetests)
+class TestSrcsetParsing:
+    @pytest.mark.parametrize("_in, _urls", parsetests)
     def test_parse(self, _in, _urls):
-        self.assertEqual(parse_srcset(_in), _urls)
+        assert parse_srcset(_in) == _urls
