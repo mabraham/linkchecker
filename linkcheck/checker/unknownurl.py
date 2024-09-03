@@ -171,6 +171,7 @@ ignored_schemes_provisional = r"""
 |bitcoin    # bitcoin
 |bitcoincash # bitcoincash
 |blob       # blob
+|bluetooth  # bluetooth
 |bolo       # bolo
 |brid       # brid
 |browserext # browserext
@@ -226,6 +227,7 @@ ignored_schemes_provisional = r"""
 |ham        # ham
 |hcap       # hcap
 |hcp        # hcp
+|hs20       # hs20
 |hxxp       # hxxp
 |hxxps      # hxxps
 |hydrazone  # hydrazone
@@ -249,6 +251,7 @@ ignored_schemes_provisional = r"""
 |lorawan    # lorawan
 |lpa        # lpa
 |lvlt       # lvlt
+|machineProvisioningProgressReporter # Windows Autopilot Modern Device Management status updates
 |magnet     # magnet
 |maps       # maps
 |market     # market
@@ -283,9 +286,11 @@ ignored_schemes_provisional = r"""
 |ms\-newsandinterests # ms-newsandinterests
 |ms\-officeapp # ms-officeapp
 |ms\-people # ms-people
+|ms\-personacard # ms-personacard
 |ms\-powerpoint # ms-powerpoint
 |ms\-project # ms-project
 |ms\-publisher # ms-publisher
+|ms\-recall # ms-recall
 |ms\-remotedesktop # ms-remotedesktop
 |ms\-remotedesktop\-launch # ms-remotedesktop-launch
 |ms\-restoretabcompanion # ms-restoretabcompanion
@@ -330,6 +335,8 @@ ignored_schemes_provisional = r"""
 |mss        # mss
 |mumble     # mumble
 |mvn        # mvn
+|mvrp       # mvrp      (see [reviewer notes])
+|mvrps      # mvrps      (see [reviewer notes])
 |notes      # notes
 |num        # Namespace Utility Modules
 |ocf        # ocf
@@ -341,7 +348,6 @@ ignored_schemes_provisional = r"""
 |otpauth    # otpauth
 |palm       # palm
 |paparazzi  # paparazzi
-|payment    # payment
 |payto      # payto
 |platform   # platform
 |proxy      # proxy
@@ -408,6 +414,8 @@ ignored_schemes_provisional = r"""
 |wtai       # wtai
 |wyciwyg    # wyciwyg
 |xfire      # xfire
+|xftp       # xftp
+|xrcp       # xrcp
 |xri        # xri
 |ymsgr      # ymsgr
 """
@@ -422,8 +430,10 @@ ignored_schemes_historical = r"""
 |modem      # modem
 |p1         # p1
 |pack       # pack
+|payment    # payment
 |prospero   # Prospero Directory Service
 |snews      # NNTP over SSL/TLS
+|thzp       # thzp
 |upt        # upt
 |videotex   # videotex
 |wais       # Wide Area Information Servers
