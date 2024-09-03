@@ -20,9 +20,8 @@ Test html parsing.
 from linkcheck.htmlutil import htmlsoup
 
 from io import StringIO
-import unittest
 
-from parameterized import parameterized
+import pytest
 
 from .htmllib import pretty_print_html
 
@@ -148,12 +147,11 @@ parsetests = [
 ]
 
 
-class TestParser(unittest.TestCase):
+class TestParser:
     """
     Test html parser.
     """
-
-    @parameterized.expand(parsetests)
+    @pytest.mark.parametrize("_in, _out", parsetests)
     def test_parse(self, _in, _out):
         # Parse all test patterns in one go.
         out = StringIO()
@@ -166,7 +164,7 @@ class TestParser(unittest.TestCase):
         """
         res = out.getvalue()
         msg = f"Test error; in: {_in!r}, out: {res!r}, expect: {_out!r}"
-        self.assertEqual(res, _out, msg=msg)
+        assert res == _out, msg
 
     def test_encoding_detection_utf_content(self):
         html = b'<meta http-equiv="content-type" content="text/html; charset=UTF-8">'
@@ -200,4 +198,4 @@ class TestParser(unittest.TestCase):
         # Results for html without a valid charset may differ
         # based on cchardet/chardet/charset-normalizer availability.
         soup = htmlsoup.make_soup(html)
-        self.assertEqual(soup.original_encoding, expected)
+        assert soup.original_encoding == expected
