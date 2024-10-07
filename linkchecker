@@ -547,7 +547,7 @@ try:
 except linkcheck.LinkCheckerError as msg:
     # config error
     print_usage(str(msg))
-linkcheck.drop_privileges()
+#linkcheck.drop_privileges()
 # test if running with -O
 if options.debug and not __debug__:
     log.warn(LOG_CMDLINE, _("Running with python -O disables debugging."))
